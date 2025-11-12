@@ -1,0 +1,1 @@
+/**\n * random_ids: Generate random IDs and hex colors.\n * TODO: Implement. Include minimal usage example at bottom.\n */\nexport function TODO() {\n  // TODO: implement\n}\n

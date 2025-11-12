@@ -1,0 +1,1 @@
+#!/usr/bin/env bash\n# compress_extract: Compress and extract archives.\n# TODO: Implement.\nset -euo pipefail\necho "TODO: implement"\n

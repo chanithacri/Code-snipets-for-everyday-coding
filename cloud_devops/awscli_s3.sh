@@ -1,0 +1,1 @@
+#!/usr/bin/env bash\n# awscli_s3: AWS CLI S3 upload/download.\n# TODO: Implement.\nset -euo pipefail\necho "TODO: implement"\n

@@ -1,0 +1,1 @@
+/**\n * JsonParser: Parse JSON with Jackson/Gson.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n */\npublic class JsonParser {\n    // TODO: Implement methods here\n}\n

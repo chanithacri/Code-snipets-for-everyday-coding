@@ -1,0 +1,4 @@
+{
+  "APP_ENV": "dev",
+  "SNIPPET_TIMEOUT_MS": 10000
+}

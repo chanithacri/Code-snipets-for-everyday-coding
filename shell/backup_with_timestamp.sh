@@ -1,0 +1,1 @@
+#!/usr/bin/env bash\n# backup_with_timestamp: Backup a directory with timestamp.\n# TODO: Implement.\nset -euo pipefail\necho "TODO: implement"\n

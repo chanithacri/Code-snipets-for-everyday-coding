@@ -1,0 +1,1 @@
+-- groupby_having: GROUP BY with HAVING.\n-- TODO: Implement queries below.\n-- Example:\n-- CREATE TABLE IF NOT EXISTS example(id INT PRIMARY KEY);\n

@@ -1,0 +1,1 @@
+#!/usr/bin/env bash\n# loop_files: Loop through files in a directory.\n# TODO: Implement.\nset -euo pipefail\necho "TODO: implement"\n

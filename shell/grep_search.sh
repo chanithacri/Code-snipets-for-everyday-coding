@@ -1,0 +1,1 @@
+#!/usr/bin/env bash\n# grep_search: Search inside files with grep.\n# TODO: Implement.\nset -euo pipefail\necho "TODO: implement"\n

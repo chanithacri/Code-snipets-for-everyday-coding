@@ -1,0 +1,1 @@
+/**\n * JUnitSample: JUnit 5 test skeleton.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n */\npublic class JUnitSample {\n    // TODO: Implement methods here\n}\n

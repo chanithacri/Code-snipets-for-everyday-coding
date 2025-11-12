@@ -1,0 +1,1 @@
+/**\n * EnumsWithMethods: Enums with fields and behavior.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n */\npublic class EnumsWithMethods {\n    // TODO: Implement methods here\n}\n

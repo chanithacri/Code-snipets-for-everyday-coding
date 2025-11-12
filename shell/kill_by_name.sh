@@ -1,0 +1,1 @@
+#!/usr/bin/env bash\n# kill_by_name: Kill process by name safely.\n# TODO: Implement.\nset -euo pipefail\necho "TODO: implement"\n

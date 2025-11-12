@@ -1,0 +1,1 @@
+/**\n * Lambdas: Lambda expressions and functional interfaces.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n */\npublic class Lambdas {\n    // TODO: Implement methods here\n}\n

@@ -1,0 +1,1 @@
+#!/usr/bin/env bash\n# ssh_keys: Generate and use SSH keys.\n# TODO: Implement.\nset -euo pipefail\necho "TODO: implement"\n

@@ -1,0 +1,1 @@
+#!/usr/bin/env bash\n# cut_columns: Extract CSV columns with cut/awk.\n# TODO: Implement.\nset -euo pipefail\necho "TODO: implement"\n

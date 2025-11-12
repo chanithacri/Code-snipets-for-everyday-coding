@@ -1,0 +1,1 @@
+-- case_when: CASE WHEN patterns.\n-- TODO: Implement queries below.\n-- Example:\n-- CREATE TABLE IF NOT EXISTS example(id INT PRIMARY KEY);\n

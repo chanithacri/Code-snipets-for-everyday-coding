@@ -1,0 +1,1 @@
+/**\n * detect_browser: Detect browser/device basics.\n * TODO: Implement. Include minimal usage example at bottom.\n */\nexport function TODO() {\n  // TODO: implement\n}\n

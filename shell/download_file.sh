@@ -1,0 +1,1 @@
+#!/usr/bin/env bash\n# download_file: Download with curl/wget.\n# TODO: Implement.\nset -euo pipefail\necho "TODO: implement"\n

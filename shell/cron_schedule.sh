@@ -1,0 +1,1 @@
+#!/usr/bin/env bash\n# cron_schedule: Crontab examples and tips.\n# TODO: Implement.\nset -euo pipefail\necho "TODO: implement"\n

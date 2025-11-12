@@ -1,0 +1,1 @@
+/**\n * CollectionsStreams: Collections and streams utilities.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n */\npublic class CollectionsStreams {\n    // TODO: Implement methods here\n}\n

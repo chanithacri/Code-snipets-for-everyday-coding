@@ -1,0 +1,1 @@
+#!/usr/bin/env bash\n# find_replace: Find and replace text recursively.\n# TODO: Implement.\nset -euo pipefail\necho "TODO: implement"\n

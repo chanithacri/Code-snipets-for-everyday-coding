@@ -1,0 +1,1 @@
+#!/usr/bin/env bash\n# check_exists: Check if file/folder exists.\n# TODO: Implement.\nset -euo pipefail\necho "TODO: implement"\n

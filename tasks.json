@@ -1,0 +1,68 @@
+[
+  {
+    "id": "python_read_write_file",
+    "file": "python/read_write_file.py",
+    "goal": "Implement Read/write files safely snippet in python.",
+    "test": "tests/python/test_read_write_file.py",
+    "criteria": [
+      "Follow best practices",
+      "Add minimal usage example",
+      "Ensure all tests pass"
+    ]
+  },
+  {
+    "id": "python_download_url",
+    "file": "python/download_url.py",
+    "goal": "Implement Download file from URL snippet in python.",
+    "test": "tests/python/test_download_url.py",
+    "criteria": [
+      "Follow best practices",
+      "Add minimal usage example",
+      "Ensure all tests pass"
+    ]
+  },
+  {
+    "id": "java_FileReader",
+    "file": "java/FileReader.java",
+    "goal": "Implement Read/write files snippet in java.",
+    "test": "tests/java/FileReaderTest.java",
+    "criteria": [
+      "Follow best practices",
+      "Add minimal usage example",
+      "Ensure all tests pass"
+    ]
+  },
+  {
+    "id": "java_HttpClientExample",
+    "file": "java/HttpClientExample.java",
+    "goal": "Implement HTTP GET/POST snippet in java.",
+    "test": "tests/java/HttpClientExampleTest.java",
+    "criteria": [
+      "Follow best practices",
+      "Add minimal usage example",
+      "Ensure all tests pass"
+    ]
+  },
+  {
+    "id": "javascript_fetch_get_post",
+    "file": "javascript/fetch_get_post.js",
+    "goal": "Implement Fetch GET/POST requests snippet in javascript.",
+    "test": "tests/javascript/fetch_get_post.test.js",
+    "criteria": [
+      "Follow best practices",
+      "Add minimal usage example",
+      "Ensure all tests pass"
+    ]
+  },
+  {
+    "id": "javascript_jwt_flow",
+    "file": "javascript/jwt_flow.js",
+    "goal": "Implement JWT authentication flow snippet in javascript.",
+    "test": "tests/javascript/jwt_flow.test.js",
+    "criteria": [
+      "Follow best practices",
+      "Add minimal usage example",
+      "Ensure all tests pass"
+    ]
+  }
+]

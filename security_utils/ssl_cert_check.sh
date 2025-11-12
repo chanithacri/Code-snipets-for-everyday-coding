@@ -1,0 +1,1 @@
+#!/usr/bin/env bash\n# ssl_cert_check: Check SSL certificate expiration.\n# TODO: Implement.\nset -euo pipefail\necho "TODO: implement"\n

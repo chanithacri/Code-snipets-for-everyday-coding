@@ -1,0 +1,1 @@
+#!/usr/bin/env bash\n# checksum_file: Compute and verify checksums.\n# TODO: Implement.\nset -euo pipefail\necho "TODO: implement"\n

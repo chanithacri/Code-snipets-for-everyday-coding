@@ -1,0 +1,1 @@
+-- stored_procs: Stored procedure skeleton.\n-- TODO: Implement queries below.\n-- Example:\n-- CREATE TABLE IF NOT EXISTS example(id INT PRIMARY KEY);\n

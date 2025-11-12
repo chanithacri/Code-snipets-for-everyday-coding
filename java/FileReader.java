@@ -1,0 +1,1 @@
+/**\n * FileReader: Read/write text and binary files.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n */\npublic class FileReader {\n    // TODO: Implement methods here\n}\n

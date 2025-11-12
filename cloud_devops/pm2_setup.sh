@@ -1,0 +1,1 @@
+#!/usr/bin/env bash\n# pm2_setup: PM2 setup for Node.js.\n# TODO: Implement.\nset -euo pipefail\necho "TODO: implement"\n

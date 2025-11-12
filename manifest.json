@@ -1,0 +1,1033 @@
+{
+  "name": "universal_code_snippets",
+  "description": "Combined scaffold with tests, docs, adapters, CI, and task automation.",
+  "version": "1.0.0",
+  "categories": [
+    "general",
+    "python",
+    "java",
+    "javascript",
+    "frontend",
+    "sql",
+    "shell",
+    "cloud_devops",
+    "security_utils",
+    "datasci_ai"
+  ],
+  "languages": [
+    "python",
+    "java",
+    "javascript",
+    "sql",
+    "shell",
+    "html",
+    "css",
+    "yaml",
+    "dockerfile",
+    "conf",
+    "tf"
+  ],
+  "snippets": [
+    {
+      "category": "general",
+      "name": "read_write_file",
+      "language": "python",
+      "description": "Read and write text/binary files safely with context managers.",
+      "path": "general/read_write_file.py"
+    },
+    {
+      "category": "general",
+      "name": "parse_json_xml",
+      "language": "python",
+      "description": "Parse JSON and XML; includes basic error handling.",
+      "path": "general/parse_json_xml.py"
+    },
+    {
+      "category": "general",
+      "name": "cli_args",
+      "language": "python",
+      "description": "Parse command-line arguments.",
+      "path": "general/cli_args.py"
+    },
+    {
+      "category": "general",
+      "name": "timer",
+      "language": "python",
+      "description": "Measure execution time of functions/blocks.",
+      "path": "general/timer.py"
+    },
+    {
+      "category": "general",
+      "name": "uuid_gen",
+      "language": "python",
+      "description": "Generate UUIDs (v4) and short IDs.",
+      "path": "general/uuid_gen.py"
+    },
+    {
+      "category": "general",
+      "name": "datetime_utils",
+      "language": "python",
+      "description": "Format/validate dates; get UTC/local now.",
+      "path": "general/datetime_utils.py"
+    },
+    {
+      "category": "general",
+      "name": "env_vars",
+      "language": "python",
+      "description": "Load and access environment variables.",
+      "path": "general/env_vars.py"
+    },
+    {
+      "category": "general",
+      "name": "logger",
+      "language": "python",
+      "description": "Structured logging with timestamps.",
+      "path": "general/logger.py"
+    },
+    {
+      "category": "general",
+      "name": "retry_backoff",
+      "language": "python",
+      "description": "Retry wrapper with exponential backoff.",
+      "path": "general/retry_backoff.py"
+    },
+    {
+      "category": "general",
+      "name": "memoize_cache",
+      "language": "python",
+      "description": "Cache function results with LRU/memoization.",
+      "path": "general/memoize_cache.py"
+    },
+    {
+      "category": "general",
+      "name": "load_config",
+      "language": "python",
+      "description": "Load configuration from .env / JSON / YAML.",
+      "path": "general/load_config.py"
+    },
+    {
+      "category": "python",
+      "name": "csv_io",
+      "language": "python",
+      "description": "Read/write CSV with pandas/csv.",
+      "path": "python/csv_io.py"
+    },
+    {
+      "category": "python",
+      "name": "excel_io",
+      "language": "python",
+      "description": "Read/write Excel files.",
+      "path": "python/excel_io.py"
+    },
+    {
+      "category": "python",
+      "name": "directory_list",
+      "language": "python",
+      "description": "List files / walk directories / glob.",
+      "path": "python/directory_list.py"
+    },
+    {
+      "category": "python",
+      "name": "archive_zip",
+      "language": "python",
+      "description": "Zip/unzip/compress files and folders.",
+      "path": "python/archive_zip.py"
+    },
+    {
+      "category": "python",
+      "name": "email_send",
+      "language": "python",
+      "description": "Send email with attachments via SMTP.",
+      "path": "python/email_send.py"
+    },
+    {
+      "category": "python",
+      "name": "download_url",
+      "language": "python",
+      "description": "Download a file from a URL with progress.",
+      "path": "python/download_url.py"
+    },
+    {
+      "category": "python",
+      "name": "web_scrape",
+      "language": "python",
+      "description": "Basic web scraping with requests + BeautifulSoup.",
+      "path": "python/web_scrape.py"
+    },
+    {
+      "category": "python",
+      "name": "sqlite_ops",
+      "language": "python",
+      "description": "Create and query SQLite databases.",
+      "path": "python/sqlite_ops.py"
+    },
+    {
+      "category": "python",
+      "name": "decorators",
+      "language": "python",
+      "description": "Logging/timing decorators.",
+      "path": "python/decorators.py"
+    },
+    {
+      "category": "python",
+      "name": "exceptions",
+      "language": "python",
+      "description": "Custom exceptions and patterns.",
+      "path": "python/exceptions.py"
+    },
+    {
+      "category": "python",
+      "name": "list_dict_sort",
+      "language": "python",
+      "description": "Sort list of dicts by keys/multiple keys.",
+      "path": "python/list_dict_sort.py"
+    },
+    {
+      "category": "python",
+      "name": "flatten_merge",
+      "language": "python",
+      "description": "Flatten nested lists and merge dicts.",
+      "path": "python/flatten_merge.py"
+    },
+    {
+      "category": "python",
+      "name": "async_tasks",
+      "language": "python",
+      "description": "Run async tasks with asyncio.",
+      "path": "python/async_tasks.py"
+    },
+    {
+      "category": "python",
+      "name": "flask_api",
+      "language": "python",
+      "description": "Skeleton REST API with Flask.",
+      "path": "python/flask_api.py"
+    },
+    {
+      "category": "python",
+      "name": "fastapi_api",
+      "language": "python",
+      "description": "Skeleton REST API with FastAPI.",
+      "path": "python/fastapi_api.py"
+    },
+    {
+      "category": "python",
+      "name": "pytest_example",
+      "language": "python",
+      "description": "Simple pytest unit test example.",
+      "path": "python/pytest_example.py"
+    },
+    {
+      "category": "python",
+      "name": "pillow_image",
+      "language": "python",
+      "description": "Read/write/resize images with Pillow.",
+      "path": "python/pillow_image.py"
+    },
+    {
+      "category": "python",
+      "name": "qr_code",
+      "language": "python",
+      "description": "Generate QR codes.",
+      "path": "python/qr_code.py"
+    },
+    {
+      "category": "python",
+      "name": "pdf_create",
+      "language": "python",
+      "description": "Create PDFs with fpdf/reportlab.",
+      "path": "python/pdf_create.py"
+    },
+    {
+      "category": "python",
+      "name": "bot_messaging",
+      "language": "python",
+      "description": "Send messages via Telegram/WhatsApp APIs (stubs).",
+      "path": "python/bot_messaging.py"
+    },
+    {
+      "category": "python",
+      "name": "selenium_automation",
+      "language": "python",
+      "description": "Automate browser with Selenium (login/scrape).",
+      "path": "python/selenium_automation.py"
+    },
+    {
+      "category": "java",
+      "name": "FileReader",
+      "language": "java",
+      "description": "Read/write text and binary files.",
+      "path": "java/FileReader.java"
+    },
+    {
+      "category": "java",
+      "name": "JsonParser",
+      "language": "java",
+      "description": "Parse JSON with Jackson/Gson.",
+      "path": "java/JsonParser.java"
+    },
+    {
+      "category": "java",
+      "name": "PropertiesReader",
+      "language": "java",
+      "description": "Read properties/config files.",
+      "path": "java/PropertiesReader.java"
+    },
+    {
+      "category": "java",
+      "name": "Logging",
+      "language": "java",
+      "description": "Logging with SLF4J/Logback.",
+      "path": "java/Logging.java"
+    },
+    {
+      "category": "java",
+      "name": "JdbcMySQL",
+      "language": "java",
+      "description": "JDBC connect/query to MySQL.",
+      "path": "java/JdbcMySQL.java"
+    },
+    {
+      "category": "java",
+      "name": "CollectionsStreams",
+      "language": "java",
+      "description": "Collections and streams utilities.",
+      "path": "java/CollectionsStreams.java"
+    },
+    {
+      "category": "java",
+      "name": "HttpClientExample",
+      "language": "java",
+      "description": "HTTP GET/POST using java.net.http.",
+      "path": "java/HttpClientExample.java"
+    },
+    {
+      "category": "java",
+      "name": "Concurrency",
+      "language": "java",
+      "description": "Executors and synchronization basics.",
+      "path": "java/Concurrency.java"
+    },
+    {
+      "category": "java",
+      "name": "DateTimeUtils",
+      "language": "java",
+      "description": "LocalDateTime and formatting.",
+      "path": "java/DateTimeUtils.java"
+    },
+    {
+      "category": "java",
+      "name": "Serialization",
+      "language": "java",
+      "description": "Serialize/deserialize objects.",
+      "path": "java/Serialization.java"
+    },
+    {
+      "category": "java",
+      "name": "EnumsWithMethods",
+      "language": "java",
+      "description": "Enums with fields and behavior.",
+      "path": "java/EnumsWithMethods.java"
+    },
+    {
+      "category": "java",
+      "name": "JUnitSample",
+      "language": "java",
+      "description": "JUnit 5 test skeleton.",
+      "path": "java/JUnitSample.java"
+    },
+    {
+      "category": "java",
+      "name": "Lambdas",
+      "language": "java",
+      "description": "Lambda expressions and functional interfaces.",
+      "path": "java/Lambdas.java"
+    },
+    {
+      "category": "java",
+      "name": "Annotations",
+      "language": "java",
+      "description": "Custom annotations example.",
+      "path": "java/Annotations.java"
+    },
+    {
+      "category": "java",
+      "name": "ApachePOIExcel",
+      "language": "java",
+      "description": "Read/write Excel with Apache POI.",
+      "path": "java/ApachePOIExcel.java"
+    },
+    {
+      "category": "java",
+      "name": "JavaFXApp",
+      "language": "java",
+      "description": "Simple JavaFX application skeleton.",
+      "path": "java/JavaFXApp.java"
+    },
+    {
+      "category": "javascript",
+      "name": "fetch_get_post",
+      "language": "javascript",
+      "description": "Fetch API GET/POST requests.",
+      "path": "javascript/fetch_get_post.js"
+    },
+    {
+      "category": "javascript",
+      "name": "debounce_throttle",
+      "language": "javascript",
+      "description": "Debounce and throttle utilities.",
+      "path": "javascript/debounce_throttle.js"
+    },
+    {
+      "category": "javascript",
+      "name": "clipboard_copy",
+      "language": "javascript",
+      "description": "Copy text to clipboard.",
+      "path": "javascript/clipboard_copy.js"
+    },
+    {
+      "category": "javascript",
+      "name": "storage_apis",
+      "language": "javascript",
+      "description": "localStorage/sessionStorage helpers.",
+      "path": "javascript/storage_apis.js"
+    },
+    {
+      "category": "javascript",
+      "name": "format_numbers",
+      "language": "javascript",
+      "description": "Format currency and numbers Intl API.",
+      "path": "javascript/format_numbers.js"
+    },
+    {
+      "category": "javascript",
+      "name": "url_query_params",
+      "language": "javascript",
+      "description": "Parse and build URL query params.",
+      "path": "javascript/url_query_params.js"
+    },
+    {
+      "category": "javascript",
+      "name": "random_ids",
+      "language": "javascript",
+      "description": "Generate random IDs and hex colors.",
+      "path": "javascript/random_ids.js"
+    },
+    {
+      "category": "javascript",
+      "name": "detect_browser",
+      "language": "javascript",
+      "description": "Detect browser/device basics.",
+      "path": "javascript/detect_browser.js"
+    },
+    {
+      "category": "javascript",
+      "name": "async_trycatch",
+      "language": "javascript",
+      "description": "Async/await with try/catch patterns.",
+      "path": "javascript/async_trycatch.js"
+    },
+    {
+      "category": "javascript",
+      "name": "modules",
+      "language": "javascript",
+      "description": "ES modules import/export skeletons.",
+      "path": "javascript/modules.js"
+    },
+    {
+      "category": "javascript",
+      "name": "node_fs",
+      "language": "javascript",
+      "description": "Node.js file read/write.",
+      "path": "javascript/node_fs.js"
+    },
+    {
+      "category": "javascript",
+      "name": "express_api",
+      "language": "javascript",
+      "description": "Express.js REST API skeleton.",
+      "path": "javascript/express_api.js"
+    },
+    {
+      "category": "javascript",
+      "name": "node_json_io",
+      "language": "javascript",
+      "description": "Read/write JSON in Node.",
+      "path": "javascript/node_json_io.js"
+    },
+    {
+      "category": "javascript",
+      "name": "multer_upload",
+      "language": "javascript",
+      "description": "File uploads with Multer.",
+      "path": "javascript/multer_upload.js"
+    },
+    {
+      "category": "javascript",
+      "name": "dotenv_usage",
+      "language": "javascript",
+      "description": "dotenv setup for env vars.",
+      "path": "javascript/dotenv_usage.js"
+    },
+    {
+      "category": "javascript",
+      "name": "event_emitter",
+      "language": "javascript",
+      "description": "Node EventEmitter sample.",
+      "path": "javascript/event_emitter.js"
+    },
+    {
+      "category": "javascript",
+      "name": "websocket_basic",
+      "language": "javascript",
+      "description": "WebSocket client/server stubs.",
+      "path": "javascript/websocket_basic.js"
+    },
+    {
+      "category": "javascript",
+      "name": "jwt_flow",
+      "language": "javascript",
+      "description": "JWT auth flow placeholders.",
+      "path": "javascript/jwt_flow.js"
+    },
+    {
+      "category": "javascript",
+      "name": "nodemailer_send",
+      "language": "javascript",
+      "description": "Send email with Nodemailer.",
+      "path": "javascript/nodemailer_send.js"
+    },
+    {
+      "category": "frontend",
+      "name": "responsive_navbar",
+      "language": "html",
+      "description": "Responsive navigation bar layout.",
+      "path": "frontend/responsive_navbar.html"
+    },
+    {
+      "category": "frontend",
+      "name": "sticky_layout",
+      "language": "html",
+      "description": "Sticky header/footer layout.",
+      "path": "frontend/sticky_layout.html"
+    },
+    {
+      "category": "frontend",
+      "name": "grid_flex_templates",
+      "language": "css",
+      "description": "Grid and flexbox templates.",
+      "path": "frontend/grid_flex_templates.css"
+    },
+    {
+      "category": "frontend",
+      "name": "modal_window",
+      "language": "html",
+      "description": "Accessible modal dialog.",
+      "path": "frontend/modal_window.html"
+    },
+    {
+      "category": "frontend",
+      "name": "dropdown_menu",
+      "language": "html",
+      "description": "Dropdown menu patterns.",
+      "path": "frontend/dropdown_menu.html"
+    },
+    {
+      "category": "frontend",
+      "name": "tooltip_popover",
+      "language": "html",
+      "description": "Tooltip/popover components.",
+      "path": "frontend/tooltip_popover.html"
+    },
+    {
+      "category": "frontend",
+      "name": "image_gallery",
+      "language": "html",
+      "description": "Responsive image gallery.",
+      "path": "frontend/image_gallery.html"
+    },
+    {
+      "category": "frontend",
+      "name": "custom_checkbox_switch",
+      "language": "html",
+      "description": "Styled checkbox/toggle switch.",
+      "path": "frontend/custom_checkbox_switch.html"
+    },
+    {
+      "category": "frontend",
+      "name": "dark_mode_toggle",
+      "language": "html",
+      "description": "Dark mode toggle with CSS vars.",
+      "path": "frontend/dark_mode_toggle.html"
+    },
+    {
+      "category": "frontend",
+      "name": "smooth_scroll",
+      "language": "html",
+      "description": "Smooth scrolling anchors.",
+      "path": "frontend/smooth_scroll.html"
+    },
+    {
+      "category": "frontend",
+      "name": "progress_bar",
+      "language": "html",
+      "description": "Animated progress bar.",
+      "path": "frontend/progress_bar.html"
+    },
+    {
+      "category": "frontend",
+      "name": "loading_spinner",
+      "language": "css",
+      "description": "CSS loading spinner.",
+      "path": "frontend/loading_spinner.css"
+    },
+    {
+      "category": "frontend",
+      "name": "sticky_sidebar",
+      "language": "html",
+      "description": "Sticky sidebar layout.",
+      "path": "frontend/sticky_sidebar.html"
+    },
+    {
+      "category": "frontend",
+      "name": "responsive_cards",
+      "language": "html",
+      "description": "Card grid with hover effects.",
+      "path": "frontend/responsive_cards.html"
+    },
+    {
+      "category": "sql",
+      "name": "create_tables",
+      "language": "sql",
+      "description": "Create database and tables.",
+      "path": "sql/create_tables.sql"
+    },
+    {
+      "category": "sql",
+      "name": "insert_bulk",
+      "language": "sql",
+      "description": "Insert multiple rows.",
+      "path": "sql/insert_bulk.sql"
+    },
+    {
+      "category": "sql",
+      "name": "update_delete",
+      "language": "sql",
+      "description": "Update/Delete with WHERE.",
+      "path": "sql/update_delete.sql"
+    },
+    {
+      "category": "sql",
+      "name": "joins_all",
+      "language": "sql",
+      "description": "INNER/LEFT/RIGHT/FULL joins.",
+      "path": "sql/joins_all.sql"
+    },
+    {
+      "category": "sql",
+      "name": "aggregations",
+      "language": "sql",
+      "description": "SUM/AVG/COUNT etc.",
+      "path": "sql/aggregations.sql"
+    },
+    {
+      "category": "sql",
+      "name": "groupby_having",
+      "language": "sql",
+      "description": "GROUP BY with HAVING.",
+      "path": "sql/groupby_having.sql"
+    },
+    {
+      "category": "sql",
+      "name": "subqueries",
+      "language": "sql",
+      "description": "Common subquery patterns.",
+      "path": "sql/subqueries.sql"
+    },
+    {
+      "category": "sql",
+      "name": "indexes",
+      "language": "sql",
+      "description": "Create/use indexes.",
+      "path": "sql/indexes.sql"
+    },
+    {
+      "category": "sql",
+      "name": "foreign_keys",
+      "language": "sql",
+      "description": "Foreign key constraints.",
+      "path": "sql/foreign_keys.sql"
+    },
+    {
+      "category": "sql",
+      "name": "views",
+      "language": "sql",
+      "description": "Create and query views.",
+      "path": "sql/views.sql"
+    },
+    {
+      "category": "sql",
+      "name": "stored_procs",
+      "language": "sql",
+      "description": "Stored procedure skeleton.",
+      "path": "sql/stored_procs.sql"
+    },
+    {
+      "category": "sql",
+      "name": "pagination",
+      "language": "sql",
+      "description": "LIMIT/OFFSET pagination.",
+      "path": "sql/pagination.sql"
+    },
+    {
+      "category": "sql",
+      "name": "case_when",
+      "language": "sql",
+      "description": "CASE WHEN patterns.",
+      "path": "sql/case_when.sql"
+    },
+    {
+      "category": "sql",
+      "name": "backup_restore",
+      "language": "sql",
+      "description": "Backup/restore commands (vendor notes).",
+      "path": "sql/backup_restore.sql"
+    },
+    {
+      "category": "shell",
+      "name": "check_exists",
+      "language": "sh",
+      "description": "Check if file/folder exists.",
+      "path": "shell/check_exists.sh"
+    },
+    {
+      "category": "shell",
+      "name": "loop_files",
+      "language": "sh",
+      "description": "Loop through files in a directory.",
+      "path": "shell/loop_files.sh"
+    },
+    {
+      "category": "shell",
+      "name": "find_replace",
+      "language": "sh",
+      "description": "Find and replace text recursively.",
+      "path": "shell/find_replace.sh"
+    },
+    {
+      "category": "shell",
+      "name": "monitor_resources",
+      "language": "sh",
+      "description": "Monitor CPU/memory usage.",
+      "path": "shell/monitor_resources.sh"
+    },
+    {
+      "category": "shell",
+      "name": "compress_extract",
+      "language": "sh",
+      "description": "Compress and extract archives.",
+      "path": "shell/compress_extract.sh"
+    },
+    {
+      "category": "shell",
+      "name": "backup_with_timestamp",
+      "language": "sh",
+      "description": "Backup a directory with timestamp.",
+      "path": "shell/backup_with_timestamp.sh"
+    },
+    {
+      "category": "shell",
+      "name": "kill_by_name",
+      "language": "sh",
+      "description": "Kill process by name safely.",
+      "path": "shell/kill_by_name.sh"
+    },
+    {
+      "category": "shell",
+      "name": "largest_files",
+      "language": "sh",
+      "description": "List largest files/folders.",
+      "path": "shell/largest_files.sh"
+    },
+    {
+      "category": "shell",
+      "name": "cron_schedule",
+      "language": "sh",
+      "description": "Crontab examples and tips.",
+      "path": "shell/cron_schedule.sh"
+    },
+    {
+      "category": "shell",
+      "name": "download_file",
+      "language": "sh",
+      "description": "Download with curl/wget.",
+      "path": "shell/download_file.sh"
+    },
+    {
+      "category": "shell",
+      "name": "check_network",
+      "language": "sh",
+      "description": "Check network connectivity.",
+      "path": "shell/check_network.sh"
+    },
+    {
+      "category": "shell",
+      "name": "grep_search",
+      "language": "sh",
+      "description": "Search inside files with grep.",
+      "path": "shell/grep_search.sh"
+    },
+    {
+      "category": "shell",
+      "name": "cut_columns",
+      "language": "sh",
+      "description": "Extract CSV columns with cut/awk.",
+      "path": "shell/cut_columns.sh"
+    },
+    {
+      "category": "cloud_devops",
+      "name": "dockerfile_python",
+      "language": "dockerfile",
+      "description": "Dockerfile template for Python.",
+      "path": "cloud_devops/Dockerfile.python"
+    },
+    {
+      "category": "cloud_devops",
+      "name": "dockerfile_node",
+      "language": "dockerfile",
+      "description": "Dockerfile template for Node.js.",
+      "path": "cloud_devops/Dockerfile.node"
+    },
+    {
+      "category": "cloud_devops",
+      "name": "dockerfile_java",
+      "language": "dockerfile",
+      "description": "Dockerfile template for Java.",
+      "path": "cloud_devops/Dockerfile.java"
+    },
+    {
+      "category": "cloud_devops",
+      "name": "docker_compose_web_db",
+      "language": "yaml",
+      "description": "Docker Compose for web + DB.",
+      "path": "cloud_devops/docker_compose_web_db.yml"
+    },
+    {
+      "category": "cloud_devops",
+      "name": "github_actions_ci",
+      "language": "yaml",
+      "description": "GitHub Actions CI workflow.",
+      "path": "cloud_devops/github_actions_ci.yml"
+    },
+    {
+      "category": "cloud_devops",
+      "name": "awscli_s3",
+      "language": "sh",
+      "description": "AWS CLI S3 upload/download.",
+      "path": "cloud_devops/awscli_s3.sh"
+    },
+    {
+      "category": "cloud_devops",
+      "name": "ssh_keys",
+      "language": "sh",
+      "description": "Generate and use SSH keys.",
+      "path": "cloud_devops/ssh_keys.sh"
+    },
+    {
+      "category": "cloud_devops",
+      "name": "terraform_sample",
+      "language": "tf",
+      "description": "Basic Terraform example.",
+      "path": "cloud_devops/terraform_sample.tf"
+    },
+    {
+      "category": "cloud_devops",
+      "name": "k8s_deployment",
+      "language": "yaml",
+      "description": "Kubernetes Deployment YAML.",
+      "path": "cloud_devops/k8s_deployment.yml"
+    },
+    {
+      "category": "cloud_devops",
+      "name": "nginx_reverse_proxy",
+      "language": "conf",
+      "description": "Nginx reverse proxy config.",
+      "path": "cloud_devops/nginx_reverse_proxy.conf"
+    },
+    {
+      "category": "cloud_devops",
+      "name": "pm2_setup",
+      "language": "sh",
+      "description": "PM2 setup for Node.js.",
+      "path": "cloud_devops/pm2_setup.sh"
+    },
+    {
+      "category": "cloud_devops",
+      "name": "logrotate_conf",
+      "language": "conf",
+      "description": "Logrotate configuration.",
+      "path": "cloud_devops/logrotate_conf.conf"
+    },
+    {
+      "category": "security_utils",
+      "name": "hash_strings",
+      "language": "python",
+      "description": "Hash strings/files (SHA-256/MD5).",
+      "path": "security_utils/hash_strings.py"
+    },
+    {
+      "category": "security_utils",
+      "name": "aes_encrypt_decrypt",
+      "language": "python",
+      "description": "Encrypt/decrypt with AES (warning about keys).",
+      "path": "security_utils/aes_encrypt_decrypt.py"
+    },
+    {
+      "category": "security_utils",
+      "name": "validate_inputs",
+      "language": "python",
+      "description": "Validate/sanitize email/password etc.",
+      "path": "security_utils/validate_inputs.py"
+    },
+    {
+      "category": "security_utils",
+      "name": "secure_tokens",
+      "language": "python",
+      "description": "Generate cryptographically secure tokens.",
+      "path": "security_utils/secure_tokens.py"
+    },
+    {
+      "category": "security_utils",
+      "name": "ssl_cert_check",
+      "language": "sh",
+      "description": "Check SSL certificate expiration.",
+      "path": "security_utils/ssl_cert_check.sh"
+    },
+    {
+      "category": "security_utils",
+      "name": "parse_jwt",
+      "language": "python",
+      "description": "Parse JWT claims without verify.",
+      "path": "security_utils/parse_jwt.py"
+    },
+    {
+      "category": "security_utils",
+      "name": "checksum_file",
+      "language": "sh",
+      "description": "Compute and verify checksums.",
+      "path": "security_utils/checksum_file.sh"
+    },
+    {
+      "category": "security_utils",
+      "name": "syslog_rw",
+      "language": "python",
+      "description": "Read/write system logs (portable stubs).",
+      "path": "security_utils/syslog_rw.py"
+    },
+    {
+      "category": "security_utils",
+      "name": "verify_signature",
+      "language": "python",
+      "description": "Verify file signature (PGP/openssl stubs).",
+      "path": "security_utils/verify_signature.py"
+    },
+    {
+      "category": "datasci_ai",
+      "name": "pandas_read_write",
+      "language": "python",
+      "description": "Read/write CSV/Excel with pandas.",
+      "path": "datasci_ai/pandas_read_write.py"
+    },
+    {
+      "category": "datasci_ai",
+      "name": "matplotlib_plot",
+      "language": "python",
+      "description": "Basic plotting with matplotlib.",
+      "path": "datasci_ai/matplotlib_plot.py"
+    },
+    {
+      "category": "datasci_ai",
+      "name": "train_test_split",
+      "language": "python",
+      "description": "Split datasets train/test.",
+      "path": "datasci_ai/train_test_split.py"
+    },
+    {
+      "category": "datasci_ai",
+      "name": "simple_model",
+      "language": "python",
+      "description": "Train a simple scikit-learn model.",
+      "path": "datasci_ai/simple_model.py"
+    },
+    {
+      "category": "datasci_ai",
+      "name": "save_load_model",
+      "language": "python",
+      "description": "Save/load model with joblib.",
+      "path": "datasci_ai/save_load_model.py"
+    },
+    {
+      "category": "datasci_ai",
+      "name": "normalize_scale",
+      "language": "python",
+      "description": "Normalize/standardize data.",
+      "path": "datasci_ai/normalize_scale.py"
+    },
+    {
+      "category": "datasci_ai",
+      "name": "correlation_heatmap",
+      "language": "python",
+      "description": "Compute/display correlation heatmap.",
+      "path": "datasci_ai/correlation_heatmap.py"
+    },
+    {
+      "category": "datasci_ai",
+      "name": "apply_function",
+      "language": "python",
+      "description": "Apply function to DataFrame column.",
+      "path": "datasci_ai/apply_function.py"
+    },
+    {
+      "category": "datasci_ai",
+      "name": "openai_api_stub",
+      "language": "python",
+      "description": "Stub for calling an LLM API.",
+      "path": "datasci_ai/openai_api_stub.py"
+    },
+    {
+      "category": "datasci_ai",
+      "name": "sentiment_transformers",
+      "language": "python",
+      "description": "Sentiment with transformers pipeline.",
+      "path": "datasci_ai/sentiment_transformers.py"
+    },
+    {
+      "category": "datasci_ai",
+      "name": "tts_basic",
+      "language": "python",
+      "description": "Text-to-speech (gTTS/pyttsx3).",
+      "path": "datasci_ai/tts_basic.py"
+    },
+    {
+      "category": "datasci_ai",
+      "name": "keyword_extract",
+      "language": "python",
+      "description": "Extract keywords (RAKE/TF-IDF stub).",
+      "path": "datasci_ai/keyword_extract.py"
+    },
+    {
+      "category": "datasci_ai",
+      "name": "word_cloud",
+      "language": "python",
+      "description": "Generate a word cloud.",
+      "path": "datasci_ai/word_cloud.py"
+    },
+    {
+      "category": "datasci_ai",
+      "name": "auto_summarize",
+      "language": "python",
+      "description": "Auto-summarize text.",
+      "path": "datasci_ai/auto_summarize.py"
+    }
+  ]
+}

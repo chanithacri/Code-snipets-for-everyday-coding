@@ -1,0 +1,1 @@
+#!/usr/bin/env bash\n# monitor_resources: Monitor CPU/memory usage.\n# TODO: Implement.\nset -euo pipefail\necho "TODO: implement"\n

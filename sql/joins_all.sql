@@ -1,0 +1,1 @@
+-- joins_all: INNER/LEFT/RIGHT/FULL joins.\n-- TODO: Implement queries below.\n-- Example:\n-- CREATE TABLE IF NOT EXISTS example(id INT PRIMARY KEY);\n

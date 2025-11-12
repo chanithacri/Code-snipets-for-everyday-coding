@@ -1,0 +1,1 @@
+#!/usr/bin/env bash\n# check_network: Check network connectivity.\n# TODO: Implement.\nset -euo pipefail\necho "TODO: implement"\n

@@ -1,0 +1,1 @@
+-- create_tables: Create database and tables.\n-- TODO: Implement queries below.\n-- Example:\n-- CREATE TABLE IF NOT EXISTS example(id INT PRIMARY KEY);\n
