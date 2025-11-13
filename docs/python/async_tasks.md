@@ -3,7 +3,15 @@
 **Language:** Python
 
 ## Overview
-\nasync_tasks: Run async tasks with asyncio.\nTODO: Implement.\n
+Asyncio helpers for running tasks with concurrency limits.
+
+Usage example
+-------------
+>>> from python import async_tasks
+>>> async def square(x):
+...     return x * x
+>>> async_tasks.run(async_tasks.gather_limited([square(2), square(3)], limit=1))
+[4, 9]
 
 ## Usage
 ```python
@@ -22,4 +30,4 @@
 ## Tests
 See: tests/python/test_async_tasks.py
 
-_Generated: 2025-11-13T13:55:58.549370Z_
+_Generated: 2025-11-13T17:21:27.099185Z_

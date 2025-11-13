@@ -3,7 +3,13 @@
 **Language:** Python
 
 ## Overview
-\npytest_example: Simple pytest unit test example.\nTODO: Implement.\n
+Helpers used by doctests and pytest demonstrations.
+
+Usage example
+-------------
+>>> from python.pytest_example import add
+>>> add(1, 2)
+3
 
 ## Usage
 ```python
@@ -22,4 +28,4 @@
 ## Tests
 See: tests/python/test_pytest_example.py
 
-_Generated: 2025-11-13T13:55:58.552059Z_
+_Generated: 2025-11-13T17:21:27.101897Z_

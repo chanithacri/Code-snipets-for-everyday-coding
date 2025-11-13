@@ -3,7 +3,13 @@
 **Language:** Python
 
 ## Overview
-\nexcel_io: Read/write Excel files.\nTODO: Implement.\n
+Read and write simple Excel files using :mod:`openpyxl`.
+
+Usage example
+-------------
+>>> from python import excel_io
+>>> excel_io.write_workbook('example.xlsx', [{'name': 'Ada'}])  # doctest: +SKIP
+PosixPath('example.xlsx')
 
 ## Usage
 ```python
@@ -22,4 +28,4 @@
 ## Tests
 See: tests/python/test_excel_io.py
 
-_Generated: 2025-11-13T13:55:58.548515Z_
+_Generated: 2025-11-13T17:21:27.100243Z_

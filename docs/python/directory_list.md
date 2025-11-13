@@ -3,7 +3,13 @@
 **Language:** Python
 
 ## Overview
-\ndirectory_list: List files / walk directories / glob.\nTODO: Implement.\n
+Directory listing helpers built on :mod:`pathlib`.
+
+Usage example
+-------------
+>>> from python import directory_list
+>>> directory_list.glob_paths('.', '*.py')  # doctest: +ELLIPSIS
+[PosixPath(...)]
 
 ## Usage
 ```python
@@ -22,4 +28,4 @@
 ## Tests
 See: tests/python/test_directory_list.py
 
-_Generated: 2025-11-13T13:55:58.545889Z_
+_Generated: 2025-11-13T17:21:27.100597Z_

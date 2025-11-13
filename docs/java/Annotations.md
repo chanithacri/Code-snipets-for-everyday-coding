@@ -22,4 +22,4 @@
 ## Tests
 See: tests/java/AnnotationsTest.java
 
-_Generated: 2025-11-13T13:55:58.553378Z_
+_Generated: 2025-11-13T17:21:27.102422Z_

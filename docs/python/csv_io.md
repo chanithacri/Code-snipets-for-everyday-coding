@@ -3,7 +3,14 @@
 **Language:** Python
 
 ## Overview
-\ncsv_io: Read/write CSV with pandas/csv.\nTODO: Implement.\n
+Read and write CSV files with optional pandas support.
+
+Usage example
+-------------
+>>> from python import csv_io
+>>> rows = csv_io.read_csv(csv_io.write_csv('tmp.csv', [{'name': 'Ada'}]))
+>>> rows[0]['name']
+'Ada'
 
 ## Usage
 ```python
@@ -22,4 +29,4 @@
 ## Tests
 See: tests/python/test_csv_io.py
 
-_Generated: 2025-11-13T13:55:58.545516Z_
+_Generated: 2025-11-13T17:21:27.099397Z_

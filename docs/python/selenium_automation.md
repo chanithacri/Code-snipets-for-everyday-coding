@@ -3,7 +3,13 @@
 **Language:** Python
 
 ## Overview
-\nselenium_automation: Automate browser with Selenium (login/scrape).\nTODO: Implement.\n
+Utility helpers for Selenium-based automation flows.
+
+Usage example
+-------------
+>>> from python import selenium_automation
+>>> selenium_automation.create_driver(factory=lambda: object())
+object()
 
 ## Usage
 ```python
@@ -22,4 +28,4 @@
 ## Tests
 See: tests/python/test_selenium_automation.py
 
-_Generated: 2025-11-13T13:55:58.548858Z_
+_Generated: 2025-11-13T17:21:27.101272Z_

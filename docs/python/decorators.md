@@ -3,7 +3,16 @@
 **Language:** Python
 
 ## Overview
-\ndecorators: Logging/timing decorators.\nTODO: Implement.\n
+Common decorators for logging and timing function calls.
+
+Usage example
+-------------
+>>> from python.decorators import log_calls
+>>> @log_calls()
+... def greet(name):
+...     return f"hi {name}"
+>>> greet('Ada')
+'hi Ada'
 
 ## Usage
 ```python
@@ -22,4 +31,4 @@
 ## Tests
 See: tests/python/test_decorators.py
 
-_Generated: 2025-11-13T13:55:58.547440Z_
+_Generated: 2025-11-13T17:21:27.099588Z_

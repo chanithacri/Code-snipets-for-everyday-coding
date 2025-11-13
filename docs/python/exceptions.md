@@ -3,7 +3,15 @@
 **Language:** Python
 
 ## Overview
-\nexceptions: Custom exceptions and patterns.\nTODO: Implement.\n
+Custom exception hierarchy for predictable error handling.
+
+Usage example
+-------------
+>>> from python import exceptions
+>>> raise exceptions.ValidationError('invalid input')
+Traceback (most recent call last):
+...
+ValidationError: invalid input
 
 ## Usage
 ```python
@@ -22,4 +30,4 @@
 ## Tests
 See: tests/python/test_exceptions.py
 
-_Generated: 2025-11-13T13:55:58.549870Z_
+_Generated: 2025-11-13T17:21:27.098689Z_

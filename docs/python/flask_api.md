@@ -3,7 +3,13 @@
 **Language:** Python
 
 ## Overview
-\nflask_api: Skeleton REST API with Flask.\nTODO: Implement.\n
+Factory for a minimal Flask application.
+
+Usage example
+-------------
+>>> from python import flask_api
+>>> flask_api.create_app({'SERVICE_NAME': 'demo'})  # doctest: +SKIP
+<Flask 'python.flask_api'>
 
 ## Usage
 ```python
@@ -22,4 +28,4 @@
 ## Tests
 See: tests/python/test_flask_api.py
 
-_Generated: 2025-11-13T13:55:58.546225Z_
+_Generated: 2025-11-13T17:21:27.101485Z_

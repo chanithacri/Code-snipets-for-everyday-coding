@@ -34,4 +34,4 @@
 ## Tests
 See: tests/java/HttpClientExampleTest.java
 
-_Generated: 2025-11-13T13:55:58.556819Z_
+_Generated: 2025-11-13T17:21:27.104506Z_
