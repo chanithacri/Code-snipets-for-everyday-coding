@@ -1,7 +1,44 @@
 {
   "total_tasks": 6,
-  "completed": 0,
-  "pending": 6,
-  "history": [],
-  "last_updated": "2025-11-12T09:17:36.269969Z"
+  "completed": 6,
+  "pending": 0,
+  "history": [
+    {
+      "id": "python_read_write_file",
+      "status": "done",
+      "timestamp": "2025-11-13T13:49:56.634637Z",
+      "notes": "Implemented helper functions with predictable errors and added shim for root import."
+    },
+    {
+      "id": "python_download_url",
+      "status": "done",
+      "timestamp": "2025-11-13T13:50:48.635754Z",
+      "notes": "Implemented streaming download helper with injectable opener."
+    },
+    {
+      "id": "java_FileReader",
+      "status": "done",
+      "timestamp": "2025-11-13T13:51:33.946578Z",
+      "notes": "Added FileReader utility with predictable FileAccessException wrappers."
+    },
+    {
+      "id": "java_HttpClientExample",
+      "status": "done",
+      "timestamp": "2025-11-13T13:52:23.961315Z",
+      "notes": "Wrapped java.net.http HttpClient with simple GET/POST helpers and predictable errors."
+    },
+    {
+      "id": "javascript_fetch_get_post",
+      "status": "done",
+      "timestamp": "2025-11-13T13:54:26.470908Z",
+      "notes": "Added CommonJS fetch helpers with optional logging and custom fetch injection."
+    },
+    {
+      "id": "javascript_jwt_flow",
+      "status": "done",
+      "timestamp": "2025-11-13T13:55:26.861715Z",
+      "notes": "Implemented HS256 JWT create/verify helpers with base64url utilities."
+    }
+  ],
+  "last_updated": "2025-11-13T13:55:58.563855Z"
 }
