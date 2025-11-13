@@ -22,4 +22,4 @@
 ## Tests
 See: tests/javascript/event_emitter.test.js
 
-_Generated: 2025-11-13T13:55:58.558032Z_
+_Generated: 2025-11-13T17:21:27.106469Z_

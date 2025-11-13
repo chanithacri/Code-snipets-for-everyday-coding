@@ -22,4 +22,4 @@
 ## Tests
 See: tests/java/EnumsWithMethodsTest.java
 
-_Generated: 2025-11-13T13:55:58.555086Z_
+_Generated: 2025-11-13T17:21:27.103914Z_

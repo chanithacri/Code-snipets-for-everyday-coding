@@ -3,7 +3,14 @@
 **Language:** Python
 
 ## Overview
-\nqr_code: Generate QR codes.\nTODO: Implement.\n
+Generate QR codes as PNG files or ASCII art.
+
+Usage example
+-------------
+>>> from python.qr_code import to_ascii
+>>> art = to_ascii('hello')  # doctest: +ELLIPSIS
+>>> isinstance(art, str)
+True
 
 ## Usage
 ```python
@@ -22,4 +29,4 @@
 ## Tests
 See: tests/python/test_qr_code.py
 
-_Generated: 2025-11-13T13:55:58.550227Z_
+_Generated: 2025-11-13T17:21:27.099025Z_

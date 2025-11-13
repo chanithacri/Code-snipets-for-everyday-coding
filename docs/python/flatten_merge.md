@@ -3,7 +3,15 @@
 **Language:** Python
 
 ## Overview
-\nflatten_merge: Flatten nested lists and merge dicts.\nTODO: Implement.\n
+Flatten nested iterables and merge dictionaries.
+
+Usage example
+-------------
+>>> from python.flatten_merge import flatten, merge_dicts
+>>> flatten([1, [2, 3]])
+[1, 2, 3]
+>>> merge_dicts({'a': 1}, {'a': 2}, strategy='first')['a']
+1
 
 ## Usage
 ```python
@@ -22,4 +30,4 @@
 ## Tests
 See: tests/python/test_flatten_merge.py
 
-_Generated: 2025-11-13T13:55:58.547200Z_
+_Generated: 2025-11-13T17:21:27.100787Z_

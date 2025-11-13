@@ -3,7 +3,20 @@
 **Language:** Python
 
 ## Overview
-\nbot_messaging: Send messages via Telegram/WhatsApp APIs (stubs).\nTODO: Implement.\n
+Send messages to chat platforms using HTTP APIs.
+
+Usage example
+-------------
+>>> from python import bot_messaging
+>>> class Dummy:
+...     status = 200
+...     def __enter__(self):
+...         return self
+...     def __exit__(self, *exc):
+...         pass
+...     def read(self):
+...         return b'{}'
+>>> bot_messaging.send_telegram(token='token', chat_id='chat', text='hi', sender=lambda req: Dummy())  # doctest: +SKIP
 
 ## Usage
 ```python
@@ -22,4 +35,4 @@
 ## Tests
 See: tests/python/test_bot_messaging.py
 
-_Generated: 2025-11-13T13:55:58.549103Z_
+_Generated: 2025-11-13T17:21:27.099764Z_

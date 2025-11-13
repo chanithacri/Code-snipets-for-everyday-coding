@@ -22,4 +22,4 @@
 ## Tests
 See: tests/java/ApachePOIExcelTest.java
 
-_Generated: 2025-11-13T13:55:58.553683Z_
+_Generated: 2025-11-13T17:21:27.102863Z_

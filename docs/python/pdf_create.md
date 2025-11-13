@@ -3,7 +3,13 @@
 **Language:** Python
 
 ## Overview
-\npdf_create: Create PDFs with fpdf/reportlab.\nTODO: Implement.\n
+Create simple PDF documents with ReportLab.
+
+Usage example
+-------------
+>>> from python import pdf_create
+>>> pdf_create.create_pdf('example.pdf', ['Hello'])  # doctest: +SKIP
+PosixPath('example.pdf')
 
 ## Usage
 ```python
@@ -22,4 +28,4 @@
 ## Tests
 See: tests/python/test_pdf_create.py
 
-_Generated: 2025-11-13T13:55:58.548238Z_
+_Generated: 2025-11-13T17:21:27.097929Z_

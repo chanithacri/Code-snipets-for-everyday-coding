@@ -3,7 +3,13 @@
 **Language:** Python
 
 ## Overview
-\npillow_image: Read/write/resize images with Pillow.\nTODO: Implement.\n
+Helpers for loading and resizing images using Pillow.
+
+Usage example
+-------------
+>>> from python import pillow_image
+>>> pillow_image.resize_image  # doctest: +ELLIPSIS
+<function ...>
 
 ## Usage
 ```python
@@ -22,4 +28,4 @@
 ## Tests
 See: tests/python/test_pillow_image.py
 
-_Generated: 2025-11-13T13:55:58.551277Z_
+_Generated: 2025-11-13T17:21:27.098839Z_

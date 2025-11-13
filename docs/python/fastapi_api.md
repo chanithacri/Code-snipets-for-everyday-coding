@@ -3,7 +3,13 @@
 **Language:** Python
 
 ## Overview
-\nfastapi_api: Skeleton REST API with FastAPI.\nTODO: Implement.\n
+Create a tiny FastAPI application for quick integration tests.
+
+Usage example
+-------------
+>>> from python import fastapi_api
+>>> fastapi_api.create_app({'title': 'demo'})  # doctest: +SKIP
+<fastapi.applications.FastAPI object ...>
 
 ## Usage
 ```python
@@ -22,4 +28,4 @@
 ## Tests
 See: tests/python/test_fastapi_api.py
 
-_Generated: 2025-11-13T13:55:58.546535Z_
+_Generated: 2025-11-13T17:21:27.099924Z_

@@ -3,7 +3,13 @@
 **Language:** Python
 
 ## Overview
-\nlist_dict_sort: Sort list of dicts by keys/multiple keys.\nTODO: Implement.\n
+Utilities for sorting lists of dictionaries.
+
+Usage example
+-------------
+>>> from python.list_dict_sort import sort_records
+>>> sort_records([{'name': 'Ada'}, {'name': 'Grace'}], 'name')[0]['name']
+'Ada'
 
 ## Usage
 ```python
@@ -22,4 +28,4 @@
 ## Tests
 See: tests/python/test_list_dict_sort.py
 
-_Generated: 2025-11-13T13:55:58.547880Z_
+_Generated: 2025-11-13T17:21:27.100083Z_

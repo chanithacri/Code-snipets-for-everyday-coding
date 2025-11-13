@@ -22,4 +22,4 @@
 ## Tests
 See: tests/java/SerializationTest.java
 
-_Generated: 2025-11-13T13:55:58.554535Z_
+_Generated: 2025-11-13T17:21:27.103526Z_

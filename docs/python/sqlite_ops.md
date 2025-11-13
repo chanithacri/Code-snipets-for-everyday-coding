@@ -3,7 +3,17 @@
 **Language:** Python
 
 ## Overview
-\nsqlite_ops: Create and query SQLite databases.\nTODO: Implement.\n
+SQLite helpers built on :mod:`sqlite3`.
+
+Usage example
+-------------
+>>> from python import sqlite_ops
+>>> sqlite_ops.execute('CREATE TABLE demo(id INTEGER PRIMARY KEY, name TEXT)')
+0
+>>> sqlite_ops.execute('INSERT INTO demo(name) VALUES (?)', ['Ada'])
+1
+>>> [row['name'] for row in sqlite_ops.query_all('SELECT name FROM demo')]
+['Ada']
 
 ## Usage
 ```python
@@ -22,4 +32,4 @@
 ## Tests
 See: tests/python/test_sqlite_ops.py
 
-_Generated: 2025-11-13T13:55:58.550963Z_
+_Generated: 2025-11-13T17:21:27.101113Z_

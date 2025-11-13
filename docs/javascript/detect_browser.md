@@ -22,4 +22,4 @@
 ## Tests
 See: tests/javascript/detect_browser.test.js
 
-_Generated: 2025-11-13T13:55:58.561145Z_
+_Generated: 2025-11-13T17:21:27.107463Z_
