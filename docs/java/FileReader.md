@@ -3,21 +3,35 @@
 **Language:** Java
 
 ## Overview
-Read/write files with buffering
+* Utility helpers for reading and writing files.
+ *
+ * <p>The helpers keep business logic isolated from I/O, wrap checked exceptions
+ * into {@link FileAccessException}, and accept an optional logger so callers can
+ * integrate with their observability stack.</p>
+ *
+ * <h2>Usage example</h2>
+ * <pre>{@code
+ * Path file = Path.of("example.txt");
+ * FileReader.writeText(file, "hello world");
+ * String contents = FileReader.readText(file);
+ * }
+ * </pre>
 
 ## Usage
 ```java
-# Example: import and call
-# TODO: add project-specific example after implementation
+# TODO: add example
 ```
 
-## Key Concepts
-- Pure core logic, I/O isolated
-- Config injected via env or function args
-- Minimal dependencies
+## Integration Notes
+- Accept config via function args/env variables
+- Avoid global state and singletons
+- Provide small adapter layers for logging and HTTP
+- Return plain data structures (dicts/POJOs) not framework-specific objects
 
 ## Dependencies
-- None by default (avoid heavy frameworks)
+- Keep optional and small. Avoid heavy frameworks.
 
 ## Tests
-See: `tests/java/FileReaderTest.java`
+See: tests/java/FileReaderTest.java
+
+_Generated: 2025-11-13T13:55:58.554256Z_
