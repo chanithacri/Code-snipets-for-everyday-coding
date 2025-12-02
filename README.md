@@ -36,4 +36,28 @@ python scripts/generate_docs.py
 pytest -q || true
 
 # 5. (Optional) Use Node for JS tests
+```
 npx jest || true
+
+### 🛠️ New Utility Snippets (Dec 1, 2025)
+
+#### Python
+- Logging configuration utility – easily set up logging formats, levels, and handlers.  
+- CSV read/write helpers – functions to read, write, and manipulate CSV files.  
+- Simple HTTP API caller – minimal requests-based utility for GET/POST with retries.  
+- Data validation/schema matching – functions for basic input validation or config validation.  
+- Basic caching decorator – like LRU or timed cache for expensive computations.  
+
+#### Java
+- Properties/config reader – utility to safely load configuration from .properties files.  
+- Simple HTTP request helper – minimal GET/POST using native libraries.  
+- Common collection utilities – functions for filtering, mapping, deduplication, or grouping collections.  
+- UUID and random string generator.  
+- Simple JSON (de)serialization helpers – for quickly marshalling/unmarshalling data.  
+
+#### JavaScript
+- Deep cloning/copying objects.  
+- Error boundary/wrapping utility.  
+- LocalStorage/sessionStorage helpers.  
+- Simple fetch/HTTP helper.  
+- Array/object utilities – such as deduplication, grouping, chunking, merging.
