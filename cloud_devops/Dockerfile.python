@@ -1,1 +1,36 @@
-# dockerfile_python: Dockerfile template for Python.\n# TODO: Fill in.\n## TODO: build steps\n
+# dockerfile_python: Dockerfile template for Python web/service apps.
+# Multi-stage build for smaller runtime images.
+
+# ---- Builder stage: install deps ----
+FROM python:3.11-slim AS builder
+ENV PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PIP_NO_CACHE_DIR=1
+WORKDIR /app
+
+# Install build tools for scientific libs when needed
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt ./
+RUN if [ -f requirements.txt ]; then pip install --prefix=/install -r requirements.txt; fi
+
+# ---- Runtime stage ----
+FROM python:3.11-slim
+ENV PATH="/install/bin:${PATH}" \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+WORKDIR /app
+
+# Copy only installed wheels and application code
+COPY --from=builder /install /install
+COPY . .
+
+# Create non-root user for better security
+RUN useradd --create-home appuser \
+    && chown -R appuser:appuser /app
+USER appuser
+
+# For Flask/FastAPI use: expose port 8000 and run app
+EXPOSE 8000
+CMD ["python", "-m", "app"]
