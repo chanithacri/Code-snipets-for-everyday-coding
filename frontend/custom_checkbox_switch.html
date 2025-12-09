@@ -1,1 +1,25 @@
-<!-- custom_checkbox_switch: Styled checkbox/toggle switch. -->\n<!doctype html>\n<html><head><meta charset=\"utf-8\"><title>TODO</title></head><body>\n<!-- TODO: implement component/layout -->\n</body></html>\n
+<!-- custom_checkbox_switch: Styled checkbox/toggle switch. -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Toggle Switch</title>
+  <style>
+    :root { font-family: Inter, system-ui; }
+    body { display:flex; align-items:center; justify-content:center; height:100vh; margin:0; background:#0f172a; color:#e2e8f0; }
+    label { display:flex; align-items:center; gap:10px; cursor:pointer; }
+    input { display:none; }
+    .switch { width:46px; height:26px; border-radius:999px; background:#1f2937; position:relative; transition:background 180ms ease; }
+    .thumb { position:absolute; width:22px; height:22px; border-radius:50%; background:#fff; top:2px; left:2px; transition: transform 180ms ease; }
+    input:checked + .switch { background:#22d3ee; }
+    input:checked + .switch .thumb { transform: translateX(20px); }
+  </style>
+</head>
+<body>
+  <label>
+    <input type="checkbox" id="toggle" aria-label="Enable alerts" />
+    <span class="switch"><span class="thumb"></span></span>
+    <span>Enable alerts</span>
+  </label>
+</body>
+</html>

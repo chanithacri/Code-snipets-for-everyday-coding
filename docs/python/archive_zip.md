@@ -14,7 +14,8 @@ PosixPath('tmp')
 
 ## Usage
 ```python
-# TODO: add example
+from archive_zip import *  # import helpers
+result = example()  # replace with a function from python/archive_zip.py
 ```
 
 ## Integration Notes
@@ -29,4 +30,4 @@ PosixPath('tmp')
 ## Tests
 See: tests/python/test_archive_zip.py
 
-_Generated: 2025-11-13T17:21:27.101711Z_
+_Generated: 2025-12-08T17:27:58.289363Z_

@@ -24,7 +24,8 @@ with command line tools, background jobs, or unit tests.
 
 ## Usage
 ```python
-# TODO: add example
+from read_write_file import *  # import helpers
+result = example()  # replace with a function from python/read_write_file.py
 ```
 
 ## Integration Notes
@@ -39,4 +40,4 @@ with command line tools, background jobs, or unit tests.
 ## Tests
 See: tests/python/test_read_write_file.py
 
-_Generated: 2025-11-13T17:21:27.098242Z_
+_Generated: 2025-12-08T17:27:58.290087Z_

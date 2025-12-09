@@ -15,7 +15,8 @@ Usage example
 
 ## Usage
 ```python
-# TODO: add example
+from flatten_merge import *  # import helpers
+result = example()  # replace with a function from python/flatten_merge.py
 ```
 
 ## Integration Notes
@@ -30,4 +31,4 @@ Usage example
 ## Tests
 See: tests/python/test_flatten_merge.py
 
-_Generated: 2025-11-13T17:21:27.100787Z_
+_Generated: 2025-12-08T17:27:58.296316Z_

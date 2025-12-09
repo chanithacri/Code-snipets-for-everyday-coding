@@ -13,7 +13,8 @@ Usage example
 
 ## Usage
 ```python
-# TODO: add example
+from list_dict_sort import *  # import helpers
+result = example()  # replace with a function from python/list_dict_sort.py
 ```
 
 ## Integration Notes
@@ -28,4 +29,4 @@ Usage example
 ## Tests
 See: tests/python/test_list_dict_sort.py
 
-_Generated: 2025-11-13T17:21:27.100083Z_
+_Generated: 2025-12-08T17:27:58.283016Z_

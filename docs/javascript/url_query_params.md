@@ -3,11 +3,13 @@
 **Language:** Javascript
 
 ## Overview
-\n * url_query_params: Parse and build URL query params.\n * TODO: Implement. Include minimal usage example at bottom.\n
+* url_query_params: Parse and build URL query params.
+ * Include minimal usage example at bottom.
 
 ## Usage
 ```javascript
-# TODO: add example
+import * as mod from './javascript/url_query_params.js';
+// Call the exported helpers, e.g. mod.example();
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/javascript/url_query_params.test.js
 
-_Generated: 2025-11-13T17:21:27.105228Z_
+_Generated: 2025-12-08T17:27:58.314571Z_

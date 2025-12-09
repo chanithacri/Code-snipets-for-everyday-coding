@@ -15,7 +15,8 @@ ValidationError: invalid input
 
 ## Usage
 ```python
-# TODO: add example
+from exceptions import *  # import helpers
+result = example()  # replace with a function from python/exceptions.py
 ```
 
 ## Integration Notes
@@ -30,4 +31,4 @@ ValidationError: invalid input
 ## Tests
 See: tests/python/test_exceptions.py
 
-_Generated: 2025-11-13T17:21:27.098689Z_
+_Generated: 2025-12-08T17:27:58.285457Z_

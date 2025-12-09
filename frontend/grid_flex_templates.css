@@ -1,1 +1,25 @@
-/* grid_flex_templates: Grid and flexbox templates. */\n.todo { /* TODO */ }\n
+/* grid_flex_templates: Grid and flexbox templates. */
+.wrapper-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.card {
+  padding: 16px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -3,11 +3,13 @@
 **Language:** Javascript
 
 ## Overview
-\n * node_json_io: Read/write JSON in Node.\n * TODO: Implement. Include minimal usage example at bottom.\n
+* node_json_io: Read/write JSON in Node.
+ * Include minimal usage example at bottom.
 
 ## Usage
 ```javascript
-# TODO: add example
+import * as mod from './javascript/node_json_io.js';
+// Call the exported helpers, e.g. mod.example();
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/javascript/node_json_io.test.js
 
-_Generated: 2025-11-13T17:21:27.106871Z_
+_Generated: 2025-12-08T17:27:58.310434Z_

@@ -1,14 +1,13 @@
-# dotenv_usage
+# utils_extra
 
 **Language:** Javascript
 
 ## Overview
-* dotenv_usage: dotenv setup for env vars.
- * Include minimal usage example at bottom.
+Add a short header comment or docstring in the snippet.
 
 ## Usage
 ```javascript
-import * as mod from './javascript/dotenv_usage.js';
+import * as mod from './javascript/utils_extra.js';
 // Call the exported helpers, e.g. mod.example();
 ```
 
@@ -22,6 +21,6 @@ import * as mod from './javascript/dotenv_usage.js';
 - Keep optional and small. Avoid heavy frameworks.
 
 ## Tests
-See: tests/javascript/dotenv_usage.test.js
+See: tests/javascript/utils_extra.test.js
 
-_Generated: 2025-12-08T17:27:58.320786Z_
+_Generated: 2025-12-08T17:27:58.318776Z_

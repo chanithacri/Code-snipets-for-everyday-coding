@@ -42,7 +42,7 @@ DOC_TMPL = """# {name}
 
 ## Usage
 ```{codeblock}
-# TODO: add example
+{usage}
 ```
 
 ## Integration Notes
@@ -60,12 +60,18 @@ See: {test_path}
 _Generated: {timestamp}_
 """
 
+USAGE_SNIPPETS = {
+    "python": "from {name} import *  # import helpers\nresult = example()  # replace with a function from {source_path}",
+    "javascript": "import * as mod from './{source_path}';\n// Call the exported helpers, e.g. mod.example();",
+    "java": "// Compile and run\n// javac {source_path}\n// java {class_name}"
+}
+
 
 def write_doc(language: str, file: pathlib.Path) -> None:
     if file.name == "__init__.py":
         return
     name = file.stem
-    overview = extract_header_text(file) or "TODO: Add header comment/docstring in snippet."
+    overview = extract_header_text(file) or "Add a short header comment or docstring in the snippet."
     lang_dir = DOCS / language
     lang_dir.mkdir(parents=True, exist_ok=True)
     out = lang_dir / f"{name}.md"
@@ -75,12 +81,15 @@ def write_doc(language: str, file: pathlib.Path) -> None:
         test_path = f"tests/java/{name[0].upper() + name[1:]}Test.java"
     else:
         test_path = f"tests/javascript/{name}.test.js"
+    usage = USAGE_SNIPPETS.get(language, "See source file for usage.")
+    source_rel = file.relative_to(REPO_ROOT).as_posix()
     out.write_text(
         DOC_TMPL.format(
             name=name,
             language=language.capitalize(),
             overview=overview,
             codeblock=language if language != "javascript" else "javascript",
+            usage=usage.format(name=name, source_path=source_rel, class_name=name),
             test_path=test_path,
             timestamp=datetime.datetime.now(datetime.UTC).isoformat().replace("+00:00", "Z"),
         ),

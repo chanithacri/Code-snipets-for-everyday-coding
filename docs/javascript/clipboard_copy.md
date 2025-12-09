@@ -3,11 +3,13 @@
 **Language:** Javascript
 
 ## Overview
-\n * clipboard_copy: Copy text to clipboard.\n * TODO: Implement. Include minimal usage example at bottom.\n
+* clipboard_copy: Copy text to clipboard.
+ * Include minimal usage example at bottom.
 
 ## Usage
 ```javascript
-# TODO: add example
+import * as mod from './javascript/clipboard_copy.js';
+// Call the exported helpers, e.g. mod.example();
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/javascript/clipboard_copy.test.js
 
-_Generated: 2025-11-13T17:21:27.106000Z_
+_Generated: 2025-12-08T17:27:58.313978Z_

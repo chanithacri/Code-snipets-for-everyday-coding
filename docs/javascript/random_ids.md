@@ -3,11 +3,13 @@
 **Language:** Javascript
 
 ## Overview
-\n * random_ids: Generate random IDs and hex colors.\n * TODO: Implement. Include minimal usage example at bottom.\n
+* random_ids: Generate random IDs and hex colors.
+ * Include minimal usage example at bottom.
 
 ## Usage
 ```javascript
-# TODO: add example
+import * as mod from './javascript/random_ids.js';
+// Call the exported helpers, e.g. mod.example();
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/javascript/random_ids.test.js
 
-_Generated: 2025-11-13T17:21:27.105864Z_
+_Generated: 2025-12-08T17:27:58.317502Z_

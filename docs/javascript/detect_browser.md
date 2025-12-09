@@ -3,11 +3,13 @@
 **Language:** Javascript
 
 ## Overview
-\n * detect_browser: Detect browser/device basics.\n * TODO: Implement. Include minimal usage example at bottom.\n
+* detect_browser: Detect browser/device basics.
+ * Include minimal usage example at bottom.
 
 ## Usage
 ```javascript
-# TODO: add example
+import * as mod from './javascript/detect_browser.js';
+// Call the exported helpers, e.g. mod.example();
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/javascript/detect_browser.test.js
 
-_Generated: 2025-11-13T17:21:27.107463Z_
+_Generated: 2025-12-08T17:27:58.319755Z_

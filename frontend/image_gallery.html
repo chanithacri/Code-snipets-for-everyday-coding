@@ -1,1 +1,27 @@
-<!-- image_gallery: Responsive image gallery. -->\n<!doctype html>\n<html><head><meta charset=\"utf-8\"><title>TODO</title></head><body>\n<!-- TODO: implement component/layout -->\n</body></html>\n
+<!-- image_gallery: Responsive image gallery. -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Image Gallery</title>
+  <style>
+    :root { font-family: Inter, system-ui; }
+    body { margin:0; padding:24px; background:#0b1224; color:#e2e8f0; }
+    h1 { margin-bottom:16px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:12px; }
+    .tile { position:relative; overflow:hidden; border-radius:12px; background:linear-gradient(135deg,#111827,#1f2937); aspect-ratio:4/3; }
+    .tile img { width:100%; height:100%; object-fit:cover; display:block; filter:saturate(1.1); transition: transform 200ms ease; }
+    .tile:hover img { transform: scale(1.05); }
+    .label { position:absolute; inset:0; background:linear-gradient(180deg,transparent,rgba(0,0,0,0.6)); color:#fff; display:flex; align-items:flex-end; padding:10px; font-weight:600; }
+  </style>
+</head>
+<body>
+  <h1>Gallery</h1>
+  <div class="grid">
+    <div class="tile"><img src="https://picsum.photos/seed/pic1/600/400" alt="Random"/><span class="label">Landscape</span></div>
+    <div class="tile"><img src="https://picsum.photos/seed/pic2/600/400" alt="Random"/><span class="label">City</span></div>
+    <div class="tile"><img src="https://picsum.photos/seed/pic3/600/400" alt="Random"/><span class="label">Mountains</span></div>
+    <div class="tile"><img src="https://picsum.photos/seed/pic4/600/400" alt="Random"/><span class="label">Forest</span></div>
+  </div>
+</body>
+</html>

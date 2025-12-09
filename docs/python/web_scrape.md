@@ -14,7 +14,8 @@ Usage example
 
 ## Usage
 ```python
-# TODO: add example
+from web_scrape import *  # import helpers
+result = example()  # replace with a function from python/web_scrape.py
 ```
 
 ## Integration Notes
@@ -29,4 +30,4 @@ Usage example
 ## Tests
 See: tests/python/test_web_scrape.py
 
-_Generated: 2025-11-13T17:21:27.100424Z_
+_Generated: 2025-12-08T17:27:58.286853Z_

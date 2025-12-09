@@ -1,3 +1,7 @@
+/**
+ * Thin wrapper around java.net.http.HttpClient for straightforward GET and POST requests.
+ */
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;

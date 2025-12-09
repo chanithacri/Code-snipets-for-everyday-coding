@@ -16,7 +16,8 @@ Usage example
 
 ## Usage
 ```python
-# TODO: add example
+from decorators import *  # import helpers
+result = example()  # replace with a function from python/decorators.py
 ```
 
 ## Integration Notes
@@ -31,4 +32,4 @@ Usage example
 ## Tests
 See: tests/python/test_decorators.py
 
-_Generated: 2025-11-13T17:21:27.099588Z_
+_Generated: 2025-12-08T17:27:58.286174Z_

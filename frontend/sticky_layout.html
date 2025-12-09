@@ -1,1 +1,24 @@
-<!-- sticky_layout: Sticky header/footer layout. -->\n<!doctype html>\n<html><head><meta charset=\"utf-8\"><title>TODO</title></head><body>\n<!-- TODO: implement component/layout -->\n</body></html>\n
+<!-- sticky_layout: Sticky header/footer layout. -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sticky Layout</title>
+  <style>
+    :root { font-family: Inter, system-ui; }
+    body { margin:0; min-height:100vh; display:grid; grid-template-rows:auto 1fr auto; background:#eef2ff; }
+    header, footer { background:#312e81; color:#e0e7ff; padding:14px 20px; }
+    main { padding:24px; }
+    footer { position:sticky; bottom:0; }
+  </style>
+</head>
+<body>
+  <header>Sticky header stays visible</header>
+  <main>
+    <p>Scrollable content.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non sem vitae eros tempor.</p>
+    <p style="height:500px"></p>
+  </main>
+  <footer>Sticky footer pinned to bottom</footer>
+</body>
+</html>

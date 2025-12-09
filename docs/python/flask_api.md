@@ -13,7 +13,8 @@ Usage example
 
 ## Usage
 ```python
-# TODO: add example
+from flask_api import *  # import helpers
+result = example()  # replace with a function from python/flask_api.py
 ```
 
 ## Integration Notes
@@ -28,4 +29,4 @@ Usage example
 ## Tests
 See: tests/python/test_flask_api.py
 
-_Generated: 2025-11-13T17:21:27.101485Z_
+_Generated: 2025-12-08T17:27:58.291872Z_
