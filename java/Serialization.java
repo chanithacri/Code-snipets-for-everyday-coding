@@ -1,3 +1,7 @@
+/**
+ * Demonstrates serializing and deserializing Java objects to disk with try-with-resources.
+ */
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

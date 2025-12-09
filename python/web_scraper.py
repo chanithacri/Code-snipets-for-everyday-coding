@@ -1,3 +1,9 @@
+"""Lightweight HTML scraping helpers using requests and BeautifulSoup.
+
+Provides a small toolkit for fetching pages, parsing elements, and extracting
+links or text content for quick data collection scripts.
+"""
+
 import requests
 from bs4 import BeautifulSoup
 

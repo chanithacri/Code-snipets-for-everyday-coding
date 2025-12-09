@@ -1,3 +1,7 @@
+/**
+ * Grab bag of Java utilities covering properties, HTTP requests, collections, and JSON handling.
+ */
+
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;

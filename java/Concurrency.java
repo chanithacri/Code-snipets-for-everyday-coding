@@ -1,3 +1,7 @@
+/**
+ * ExecutorService and CompletableFuture patterns for running tasks concurrently and aggregating results.
+ */
+
 import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;

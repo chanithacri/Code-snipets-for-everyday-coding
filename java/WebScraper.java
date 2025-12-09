@@ -1,3 +1,7 @@
+/**
+ * JSoup-powered helpers for fetching pages and extracting elements with robust error handling.
+ */
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

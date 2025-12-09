@@ -1,3 +1,7 @@
+/**
+ * JDBC convenience methods for connecting to MySQL, running queries, and closing resources cleanly.
+ */
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;

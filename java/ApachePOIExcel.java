@@ -1,3 +1,7 @@
+/**
+ * Read/write Excel spreadsheets using Apache POI with workbook and sheet helpers.
+ */
+
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;

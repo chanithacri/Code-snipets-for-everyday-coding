@@ -1,3 +1,7 @@
+/**
+ * Utility for loading .properties files from disk or the classpath with typed accessors.
+ */
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;

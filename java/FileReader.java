@@ -1,3 +1,7 @@
+/**
+ * Safe text file reader that wraps IOExceptions and supports line-by-line callbacks.
+ */
+
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;

@@ -1,3 +1,7 @@
+/**
+ * Showcase of defining custom annotations and inspecting them at runtime for audit logging.
+ */
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

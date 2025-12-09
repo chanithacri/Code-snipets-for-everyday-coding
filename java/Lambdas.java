@@ -1,3 +1,7 @@
+/**
+ * Examples of lambda expressions, predicates, and functional pipelines for concise data processing.
+ */
+
 import java.util.List;
 import java.util.function.Function;
 import java.util.function.Predicate;

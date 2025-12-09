@@ -1,3 +1,7 @@
+/**
+ * Stream and collection utilities that demonstrate filtering, mapping, grouping, and aggregation.
+ */
+
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;

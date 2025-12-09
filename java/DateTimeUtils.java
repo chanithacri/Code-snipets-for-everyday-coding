@@ -1,3 +1,7 @@
+/**
+ * Date and time formatting, parsing, and duration utilities built on java.time.
+ */
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;

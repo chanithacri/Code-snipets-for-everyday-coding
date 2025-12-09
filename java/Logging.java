@@ -1,3 +1,7 @@
+/**
+ * java.util.logging configuration helpers for console/file output and leveled messages.
+ */
+
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;

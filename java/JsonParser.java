@@ -1,3 +1,7 @@
+/**
+ * Minimal JSON parsing helper for flat key/value payloads without external dependencies.
+ */
+
 import java.util.HashMap;
 import java.util.Map;
 

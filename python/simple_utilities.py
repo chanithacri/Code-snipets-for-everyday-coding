@@ -1,3 +1,9 @@
+"""Miscellaneous helper utilities for common Python tasks.
+
+Includes logging helpers, CSV reading, HTTP requests, memoization, and
+decorators for retrying or timing callables used throughout the snippets.
+"""
+
 import logging
 import csv
 import requests

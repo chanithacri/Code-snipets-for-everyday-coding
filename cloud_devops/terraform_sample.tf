@@ -1,4 +1,4 @@
-// terraform_sample: Basic AWS infrastructure (S3 bucket + security group)
+# terraform_sample: Provision a simple AWS S3 bucket and security group baseline.
 terraform {
   required_version = ">= 1.3"
   required_providers {
