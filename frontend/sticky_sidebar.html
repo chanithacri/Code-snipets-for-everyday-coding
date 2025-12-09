@@ -1,1 +1,34 @@
-<!-- sticky_sidebar: Sticky sidebar layout. -->\n<!doctype html>\n<html><head><meta charset=\"utf-8\"><title>TODO</title></head><body>\n<!-- TODO: implement component/layout -->\n</body></html>\n
+<!-- sticky_sidebar: Sticky sidebar layout. -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sticky Sidebar</title>
+  <style>
+    :root { font-family: "Inter", system-ui; }
+    body { margin:0; display:grid; grid-template-columns:280px 1fr; min-height:100vh; background:#f8fafc; }
+    aside { position:sticky; top:0; height:100vh; padding:24px; background:#0f172a; color:#e2e8f0; }
+    main { padding:32px; }
+    nav a { display:block; color:#cbd5e1; text-decoration:none; padding:8px 0; }
+    nav a:hover { color:#fff; }
+    section { margin-bottom:32px; background:#fff; border-radius:12px; padding:20px; box-shadow:0 10px 30px rgba(0,0,0,0.05); }
+  </style>
+</head>
+<body>
+  <aside>
+    <h2>Docs</h2>
+    <nav>
+      <a href="#intro">Introduction</a>
+      <a href="#setup">Setup</a>
+      <a href="#api">API</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </aside>
+  <main>
+    <section id="intro"><h3>Introduction</h3><p>Sticky sidebars remain in view for long scrolls.</p></section>
+    <section id="setup"><h3>Setup</h3><p>Use CSS <code>position: sticky</code> with a top offset.</p></section>
+    <section id="api"><h3>API</h3><p>Pair with anchor links for quick jumps inside docs.</p></section>
+    <section id="faq"><h3>FAQ</h3><p>Works across modern browsers without JavaScript.</p></section>
+  </main>
+</body>
+</html>

@@ -3,11 +3,13 @@
 **Language:** Java
 
 ## Overview
-\n * Lambdas: Lambda expressions and functional interfaces.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n
+* Lambdas: Lambda expressions and functional interfaces.
 
 ## Usage
 ```java
-# TODO: add example
+// Compile and run
+// javac java/Lambdas.java
+// java Lambdas
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/java/LambdasTest.java
 
-_Generated: 2025-11-13T17:21:27.104105Z_
+_Generated: 2025-12-08T17:27:58.301059Z_

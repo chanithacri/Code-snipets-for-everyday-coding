@@ -3,11 +3,17 @@
 **Language:** Java
 
 ## Overview
-\n * EnumsWithMethods: Enums with fields and behavior.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n
+* EnumsWithMethods: Enums with fields and behavior.
+ *
+ * The {@link Priority} enum demonstrates how to attach metadata and helper
+ * methods directly on an enum. Utility methods in this class showcase common
+ * lookups and formatting.
 
 ## Usage
 ```java
-# TODO: add example
+// Compile and run
+// javac java/EnumsWithMethods.java
+// java EnumsWithMethods
 ```
 
 ## Integration Notes
@@ -22,4 +28,4 @@
 ## Tests
 See: tests/java/EnumsWithMethodsTest.java
 
-_Generated: 2025-11-13T17:21:27.103914Z_
+_Generated: 2025-12-08T17:27:58.306883Z_

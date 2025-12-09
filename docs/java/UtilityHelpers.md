@@ -1,15 +1,15 @@
-# dotenv_usage
+# UtilityHelpers
 
-**Language:** Javascript
+**Language:** Java
 
 ## Overview
-* dotenv_usage: dotenv setup for env vars.
- * Include minimal usage example at bottom.
+* Load configuration from a .properties file.
 
 ## Usage
-```javascript
-import * as mod from './javascript/dotenv_usage.js';
-// Call the exported helpers, e.g. mod.example();
+```java
+// Compile and run
+// javac java/UtilityHelpers.java
+// java UtilityHelpers
 ```
 
 ## Integration Notes
@@ -22,6 +22,6 @@ import * as mod from './javascript/dotenv_usage.js';
 - Keep optional and small. Avoid heavy frameworks.
 
 ## Tests
-See: tests/javascript/dotenv_usage.test.js
+See: tests/java/UtilityHelpersTest.java
 
-_Generated: 2025-12-08T17:27:58.320786Z_
+_Generated: 2025-12-08T17:27:58.307980Z_

@@ -19,7 +19,9 @@
 
 ## Usage
 ```java
-# TODO: add example
+// Compile and run
+// javac java/HttpClientExample.java
+// java HttpClientExample
 ```
 
 ## Integration Notes
@@ -34,4 +36,4 @@
 ## Tests
 See: tests/java/HttpClientExampleTest.java
 
-_Generated: 2025-11-13T17:21:27.104506Z_
+_Generated: 2025-12-08T17:27:58.300373Z_

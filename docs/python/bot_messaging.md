@@ -20,7 +20,8 @@ Usage example
 
 ## Usage
 ```python
-# TODO: add example
+from bot_messaging import *  # import helpers
+result = example()  # replace with a function from python/bot_messaging.py
 ```
 
 ## Integration Notes
@@ -35,4 +36,4 @@ Usage example
 ## Tests
 See: tests/python/test_bot_messaging.py
 
-_Generated: 2025-11-13T17:21:27.099764Z_
+_Generated: 2025-12-08T17:27:58.288655Z_

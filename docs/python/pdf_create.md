@@ -13,7 +13,8 @@ PosixPath('example.pdf')
 
 ## Usage
 ```python
-# TODO: add example
+from pdf_create import *  # import helpers
+result = example()  # replace with a function from python/pdf_create.py
 ```
 
 ## Integration Notes
@@ -28,4 +29,4 @@ PosixPath('example.pdf')
 ## Tests
 See: tests/python/test_pdf_create.py
 
-_Generated: 2025-11-13T17:21:27.097929Z_
+_Generated: 2025-12-08T17:27:58.291255Z_

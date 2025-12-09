@@ -13,7 +13,8 @@ object()
 
 ## Usage
 ```python
-# TODO: add example
+from selenium_automation import *  # import helpers
+result = example()  # replace with a function from python/selenium_automation.py
 ```
 
 ## Integration Notes
@@ -28,4 +29,4 @@ object()
 ## Tests
 See: tests/python/test_selenium_automation.py
 
-_Generated: 2025-11-13T17:21:27.101272Z_
+_Generated: 2025-12-08T17:27:58.283934Z_

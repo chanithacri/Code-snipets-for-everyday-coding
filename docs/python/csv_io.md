@@ -14,7 +14,8 @@ Usage example
 
 ## Usage
 ```python
-# TODO: add example
+from csv_io import *  # import helpers
+result = example()  # replace with a function from python/csv_io.py
 ```
 
 ## Integration Notes
@@ -29,4 +30,4 @@ Usage example
 ## Tests
 See: tests/python/test_csv_io.py
 
-_Generated: 2025-11-13T17:21:27.099397Z_
+_Generated: 2025-12-08T17:27:58.295583Z_

@@ -3,11 +3,13 @@
 **Language:** Javascript
 
 ## Overview
-\n * node_fs: Node.js file read/write.\n * TODO: Implement. Include minimal usage example at bottom.\n
+* node_fs: Node.js file read/write.
+ * Include minimal usage example at bottom.
 
 ## Usage
 ```javascript
-# TODO: add example
+import * as mod from './javascript/node_fs.js';
+// Call the exported helpers, e.g. mod.example();
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/javascript/node_fs.test.js
 
-_Generated: 2025-11-13T17:21:27.106600Z_
+_Generated: 2025-12-08T17:27:58.315199Z_

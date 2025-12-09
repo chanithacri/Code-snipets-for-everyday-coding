@@ -3,11 +3,17 @@
 **Language:** Java
 
 ## Overview
-\n * JavaFXApp: Simple JavaFX application skeleton.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n
+* JavaFXApp: Simple JavaFX application skeleton.
+ *
+ * To avoid a hard dependency on JavaFX in this repository, the class exposes a
+ * template string that can be copied into a JavaFX-enabled project. The
+ * example illustrates the minimum code required to launch a window.
 
 ## Usage
 ```java
-# TODO: add example
+// Compile and run
+// javac java/JavaFXApp.java
+// java JavaFXApp
 ```
 
 ## Integration Notes
@@ -22,4 +28,4 @@
 ## Tests
 See: tests/java/JavaFXAppTest.java
 
-_Generated: 2025-11-13T17:21:27.102650Z_
+_Generated: 2025-12-08T17:27:58.304907Z_

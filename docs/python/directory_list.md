@@ -13,7 +13,8 @@ Usage example
 
 ## Usage
 ```python
-# TODO: add example
+from directory_list import *  # import helpers
+result = example()  # replace with a function from python/directory_list.py
 ```
 
 ## Integration Notes
@@ -28,4 +29,4 @@ Usage example
 ## Tests
 See: tests/python/test_directory_list.py
 
-_Generated: 2025-11-13T17:21:27.100597Z_
+_Generated: 2025-12-08T17:27:58.294932Z_

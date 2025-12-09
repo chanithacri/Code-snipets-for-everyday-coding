@@ -3,11 +3,13 @@
 **Language:** Java
 
 ## Overview
-\n * Serialization: Serialize/deserialize objects.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n
+* Serialization: Serialize/deserialize objects.
 
 ## Usage
 ```java
-# TODO: add example
+// Compile and run
+// javac java/Serialization.java
+// java Serialization
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/java/SerializationTest.java
 
-_Generated: 2025-11-13T17:21:27.103526Z_
+_Generated: 2025-12-08T17:27:58.299843Z_

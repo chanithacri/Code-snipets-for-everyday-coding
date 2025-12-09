@@ -1,1 +1,20 @@
-/**\n * JUnitSample: JUnit 5 test skeleton.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n */\npublic class JUnitSample {\n    // TODO: Implement methods here\n}\n
+/**
+ * JUnitSample: JUnit 5 test skeleton.
+ *
+ * Contains simple, side-effect-free methods that are easy to exercise from
+ * unit tests.
+ */
+public class JUnitSample {
+
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
+    public static boolean isPalindrome(String value) {
+        if (value == null) {
+            return false;
+        }
+        String cleaned = value.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        return new StringBuilder(cleaned).reverse().toString().equals(cleaned);
+    }
+}

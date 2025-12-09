@@ -3,11 +3,13 @@
 **Language:** Java
 
 ## Overview
-\n * CollectionsStreams: Collections and streams utilities.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n
+* CollectionsStreams: Collections and streams utilities.
 
 ## Usage
 ```java
-# TODO: add example
+// Compile and run
+// javac java/CollectionsStreams.java
+// java CollectionsStreams
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/java/CollectionsStreamsTest.java
 
-_Generated: 2025-11-13T17:21:27.103013Z_
+_Generated: 2025-12-08T17:27:58.304360Z_

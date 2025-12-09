@@ -3,11 +3,17 @@
 **Language:** Java
 
 ## Overview
-\n * JsonParser: Parse JSON with Jackson/Gson.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n
+* JsonParser: Parse JSON with Jackson/Gson.
+ *
+ * Provides minimal parsing for flat JSON objects without introducing external
+ * dependencies. The parser expects simple string key/value pairs, making it
+ * suitable for configuration-style payloads.
 
 ## Usage
 ```java
-# TODO: add example
+// Compile and run
+// javac java/JsonParser.java
+// java JsonParser
 ```
 
 ## Integration Notes
@@ -22,4 +28,4 @@
 ## Tests
 See: tests/java/JsonParserTest.java
 
-_Generated: 2025-11-13T17:21:27.103367Z_
+_Generated: 2025-12-08T17:27:58.302263Z_

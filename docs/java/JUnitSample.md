@@ -3,11 +3,16 @@
 **Language:** Java
 
 ## Overview
-\n * JUnitSample: JUnit 5 test skeleton.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n
+* JUnitSample: JUnit 5 test skeleton.
+ *
+ * Contains simple, side-effect-free methods that are easy to exercise from
+ * unit tests.
 
 ## Usage
 ```java
-# TODO: add example
+// Compile and run
+// javac java/JUnitSample.java
+// java JUnitSample
 ```
 
 ## Integration Notes
@@ -22,4 +27,4 @@
 ## Tests
 See: tests/java/JUnitSampleTest.java
 
-_Generated: 2025-11-13T17:21:27.104380Z_
+_Generated: 2025-12-08T17:27:58.301610Z_

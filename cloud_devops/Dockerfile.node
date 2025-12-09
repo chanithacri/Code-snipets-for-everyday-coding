@@ -1,1 +1,29 @@
-# dockerfile_node: Dockerfile template for Node.js.\n# TODO: Fill in.\n## TODO: build steps\n
+# dockerfile_node: Production-ready Node.js image.
+# Uses multi-stage build to keep runtime lean.
+
+# ---- Builder stage ----
+FROM node:20-alpine AS builder
+WORKDIR /app
+ENV NODE_ENV=production
+
+# Install dependencies (include dev deps for build step)
+COPY package*.json ./
+RUN npm ci
+
+# Copy source and build
+COPY . .
+RUN npm run build --if-present
+
+# ---- Runtime stage ----
+FROM node:20-alpine
+WORKDIR /app
+ENV NODE_ENV=production \
+    PORT=3000
+
+# Copy node_modules and built assets
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/package*.json ./
+
+EXPOSE 3000
+CMD ["node", "dist/index.js"]

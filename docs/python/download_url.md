@@ -22,7 +22,8 @@ Usage example
 
 ## Usage
 ```python
-# TODO: add example
+from download_url import *  # import helpers
+result = example()  # replace with a function from python/download_url.py
 ```
 
 ## Integration Notes
@@ -37,4 +38,4 @@ Usage example
 ## Tests
 See: tests/python/test_download_url.py
 
-_Generated: 2025-11-13T17:21:27.098494Z_
+_Generated: 2025-12-08T17:27:58.298096Z_

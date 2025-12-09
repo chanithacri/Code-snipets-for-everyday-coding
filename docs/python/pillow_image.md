@@ -13,7 +13,8 @@ Usage example
 
 ## Usage
 ```python
-# TODO: add example
+from pillow_image import *  # import helpers
+result = example()  # replace with a function from python/pillow_image.py
 ```
 
 ## Integration Notes
@@ -28,4 +29,4 @@ Usage example
 ## Tests
 See: tests/python/test_pillow_image.py
 
-_Generated: 2025-11-13T17:21:27.098839Z_
+_Generated: 2025-12-08T17:27:58.287548Z_

@@ -1,1 +1,51 @@
-<!-- responsive_cards: Card grid with hover effects. -->\n<!doctype html>\n<html><head><meta charset=\"utf-8\"><title>TODO</title></head><body>\n<!-- TODO: implement component/layout -->\n</body></html>\n
+<!-- responsive_cards: Card grid with hover effects. -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Responsive Cards</title>
+  <style>
+    :root { font-family: "Inter", system-ui, -apple-system, sans-serif; }
+    body { margin: 0; padding: 32px; background: #f6f7fb; color: #1f2933; }
+    h1 { margin-bottom: 16px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      transition: transform 160ms ease, box-shadow 160ms ease;
+      border: 1px solid #e5e7eb;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(0,0,0,0.08); }
+    .card h3 { margin: 0 0 8px; font-size: 1.1rem; }
+    .card p { margin: 0; color: #4b5563; }
+    .pill { display: inline-block; background:#e0f2fe; color:#075985; padding:4px 10px; border-radius:999px; font-size:12px; margin-bottom:10px; }
+  </style>
+</head>
+<body>
+  <h1>Feature Highlights</h1>
+  <div class="grid">
+    <article class="card">
+      <span class="pill">Performance</span>
+      <h3>Fast rendering</h3>
+      <p>Optimised layouts with GPU-accelerated hover transitions.</p>
+    </article>
+    <article class="card">
+      <span class="pill">Security</span>
+      <h3>Hardened defaults</h3>
+      <p>Sensible defaults for CSP, TLS, and dependency hygiene.</p>
+    </article>
+    <article class="card">
+      <span class="pill">Design</span>
+      <h3>Responsive grid</h3>
+      <p>Cards resize smoothly down to mobile breakpoints.</p>
+    </article>
+    <article class="card">
+      <span class="pill">Support</span>
+      <h3>Team ready</h3>
+      <p>Documented components with clear accessibility affordances.</p>
+    </article>
+  </div>
+</body>
+</html>

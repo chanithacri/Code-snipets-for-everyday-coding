@@ -13,7 +13,8 @@ PosixPath('example.xlsx')
 
 ## Usage
 ```python
-# TODO: add example
+from excel_io import *  # import helpers
+result = example()  # replace with a function from python/excel_io.py
 ```
 
 ## Integration Notes
@@ -28,4 +29,4 @@ PosixPath('example.xlsx')
 ## Tests
 See: tests/python/test_excel_io.py
 
-_Generated: 2025-11-13T17:21:27.100243Z_
+_Generated: 2025-12-08T17:27:58.294349Z_

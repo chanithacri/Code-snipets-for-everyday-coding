@@ -1,1 +1,39 @@
-<!-- dark_mode_toggle: Dark mode toggle with CSS vars. -->\n<!doctype html>\n<html><head><meta charset=\"utf-8\"><title>TODO</title></head><body>\n<!-- TODO: implement component/layout -->\n</body></html>\n
+<!-- dark_mode_toggle: Dark mode toggle with CSS vars. -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dark Mode Toggle</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --fg: #0f172a;
+      --card: #ffffff;
+    }
+    [data-theme="dark"] {
+      --bg: #0b1224;
+      --fg: #e2e8f0;
+      --card: #111827;
+    }
+    body { margin:0; font-family: Inter, system-ui; background: var(--bg); color: var(--fg); display:flex; align-items:center; justify-content:center; height:100vh; }
+    .panel { background: var(--card); padding: 24px; border-radius: 12px; box-shadow:0 15px 40px rgba(0,0,0,0.12); min-width:280px; text-align:center; }
+    button { border:none; border-radius: 999px; padding: 10px 16px; background:#6366f1; color:#fff; font-weight:600; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <div class="panel">
+    <h2>Theme preview</h2>
+    <p id="status">Light mode enabled</p>
+    <button id="toggle">Toggle theme</button>
+  </div>
+  <script>
+    const toggle = document.getElementById('toggle');
+    const status = document.getElementById('status');
+    toggle.addEventListener('click', () => {
+      const dark = document.documentElement.dataset.theme === 'dark';
+      document.documentElement.dataset.theme = dark ? 'light' : 'dark';
+      status.textContent = dark ? 'Light mode enabled' : 'Dark mode enabled';
+    });
+  </script>
+</body>
+</html>

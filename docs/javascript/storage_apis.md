@@ -3,11 +3,13 @@
 **Language:** Javascript
 
 ## Overview
-\n * storage_apis: localStorage/sessionStorage helpers.\n * TODO: Implement. Include minimal usage example at bottom.\n
+* storage_apis: localStorage/sessionStorage helpers.
+ * Include minimal usage example at bottom.
 
 ## Usage
 ```javascript
-# TODO: add example
+import * as mod from './javascript/storage_apis.js';
+// Call the exported helpers, e.g. mod.example();
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/javascript/storage_apis.test.js
 
-_Generated: 2025-11-13T17:21:27.106256Z_
+_Generated: 2025-12-08T17:27:58.313126Z_

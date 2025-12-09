@@ -17,7 +17,8 @@ Usage example
 
 ## Usage
 ```python
-# TODO: add example
+from sqlite_ops import *  # import helpers
+result = example()  # replace with a function from python/sqlite_ops.py
 ```
 
 ## Integration Notes
@@ -32,4 +33,4 @@ Usage example
 ## Tests
 See: tests/python/test_sqlite_ops.py
 
-_Generated: 2025-11-13T17:21:27.101113Z_
+_Generated: 2025-12-08T17:27:58.292932Z_

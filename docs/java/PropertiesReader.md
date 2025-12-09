@@ -3,11 +3,13 @@
 **Language:** Java
 
 ## Overview
-\n * PropertiesReader: Read properties/config files.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n
+* PropertiesReader: Read properties/config files.
 
 ## Usage
 ```java
-# TODO: add example
+// Compile and run
+// javac java/PropertiesReader.java
+// java PropertiesReader
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/java/PropertiesReaderTest.java
 
-_Generated: 2025-11-13T17:21:27.104876Z_
+_Generated: 2025-12-08T17:27:58.308408Z_
