@@ -3,11 +3,13 @@
 **Language:** Javascript
 
 ## Overview
-\n * multer_upload: File uploads with Multer.\n * TODO: Implement. Include minimal usage example at bottom.\n
+* multer_upload: File uploads with Multer.
+ * Include minimal usage example at bottom.
 
 ## Usage
 ```javascript
-# TODO: add example
+import * as mod from './javascript/multer_upload.js';
+// Call the exported helpers, e.g. mod.example();
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/javascript/multer_upload.test.js
 
-_Generated: 2025-11-13T17:21:27.105742Z_
+_Generated: 2025-12-08T17:27:58.311487Z_

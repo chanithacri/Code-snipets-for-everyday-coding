@@ -3,11 +3,13 @@
 **Language:** Javascript
 
 ## Overview
-\n * modules: ES modules import/export skeletons.\n * TODO: Implement. Include minimal usage example at bottom.\n
+* modules: ES modules import/export skeletons.
+ * Include minimal usage example at bottom.
 
 ## Usage
 ```javascript
-# TODO: add example
+import * as mod from './javascript/modules.js';
+// Call the exported helpers, e.g. mod.example();
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/javascript/modules.test.js
 
-_Generated: 2025-11-13T17:21:27.105521Z_
+_Generated: 2025-12-08T17:27:58.310936Z_

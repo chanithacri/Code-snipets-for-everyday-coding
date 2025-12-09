@@ -13,7 +13,8 @@ Usage example
 
 ## Usage
 ```python
-# TODO: add example
+from pytest_example import *  # import helpers
+result = example()  # replace with a function from python/pytest_example.py
 ```
 
 ## Integration Notes
@@ -28,4 +29,4 @@ Usage example
 ## Tests
 See: tests/python/test_pytest_example.py
 
-_Generated: 2025-11-13T17:21:27.101897Z_
+_Generated: 2025-12-08T17:27:58.290687Z_

@@ -3,11 +3,13 @@
 **Language:** Javascript
 
 ## Overview
-\n * websocket_basic: WebSocket client/server stubs.\n * TODO: Implement. Include minimal usage example at bottom.\n
+* websocket_basic: WebSocket client/server stubs.
+ * Include minimal usage example at bottom.
 
 ## Usage
 ```javascript
-# TODO: add example
+import * as mod from './javascript/websocket_basic.js';
+// Call the exported helpers, e.g. mod.example();
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/javascript/websocket_basic.test.js
 
-_Generated: 2025-11-13T17:21:27.107252Z_
+_Generated: 2025-12-08T17:27:58.319244Z_

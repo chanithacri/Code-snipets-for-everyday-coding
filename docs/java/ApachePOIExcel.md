@@ -3,11 +3,18 @@
 **Language:** Java
 
 ## Overview
-\n * ApachePOIExcel: Read/write Excel with Apache POI.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n
+* ApachePOIExcel: Read/write Excel with Apache POI.
+ *
+ * The helper methods avoid a hard dependency on Apache POI while still showing
+ * how data could be structured for export. The returned data maps sheet names
+ * to row/column values that can be fed into a workbook builder in a project
+ * that includes POI.
 
 ## Usage
 ```java
-# TODO: add example
+// Compile and run
+// javac java/ApachePOIExcel.java
+// java ApachePOIExcel
 ```
 
 ## Integration Notes
@@ -22,4 +29,4 @@
 ## Tests
 See: tests/java/ApachePOIExcelTest.java
 
-_Generated: 2025-11-13T17:21:27.102863Z_
+_Generated: 2025-12-08T17:27:58.308902Z_

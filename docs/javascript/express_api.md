@@ -3,11 +3,13 @@
 **Language:** Javascript
 
 ## Overview
-\n * express_api: Express.js REST API skeleton.\n * TODO: Implement. Include minimal usage example at bottom.\n
+* express_api: Express.js REST API skeleton.
+ * Include minimal usage example at bottom.
 
 ## Usage
 ```javascript
-# TODO: add example
+import * as mod from './javascript/express_api.js';
+// Call the exported helpers, e.g. mod.example();
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/javascript/express_api.test.js
 
-_Generated: 2025-11-13T17:21:27.105352Z_
+_Generated: 2025-12-08T17:27:58.316366Z_

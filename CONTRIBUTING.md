@@ -49,5 +49,5 @@ Our goal is to maintain a **clean, modular, and framework-agnostic** library of 
    ```python
    """
    example_snippet: Demonstrates X feature
-   TODO: Implement core logic.
+   Add a concise summary of the core logic here.
    """

@@ -1,15 +1,14 @@
-# dotenv_usage
+# web_scraper
 
-**Language:** Javascript
+**Language:** Python
 
 ## Overview
-* dotenv_usage: dotenv setup for env vars.
- * Include minimal usage example at bottom.
+Add a short header comment or docstring in the snippet.
 
 ## Usage
-```javascript
-import * as mod from './javascript/dotenv_usage.js';
-// Call the exported helpers, e.g. mod.example();
+```python
+from web_scraper import *  # import helpers
+result = example()  # replace with a function from python/web_scraper.py
 ```
 
 ## Integration Notes
@@ -22,6 +21,6 @@ import * as mod from './javascript/dotenv_usage.js';
 - Keep optional and small. Avoid heavy frameworks.
 
 ## Tests
-See: tests/javascript/dotenv_usage.test.js
+See: tests/python/test_web_scraper.py
 
-_Generated: 2025-12-08T17:27:58.320786Z_
+_Generated: 2025-12-08T17:27:58.296864Z_

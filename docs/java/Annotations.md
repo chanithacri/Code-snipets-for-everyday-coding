@@ -3,11 +3,13 @@
 **Language:** Java
 
 ## Overview
-\n * Annotations: Custom annotations example.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n
+* Annotations: Custom annotations example.
 
 ## Usage
 ```java
-# TODO: add example
+// Compile and run
+// javac java/Annotations.java
+// java Annotations
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/java/AnnotationsTest.java
 
-_Generated: 2025-11-13T17:21:27.102422Z_
+_Generated: 2025-12-08T17:27:58.307395Z_

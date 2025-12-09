@@ -3,11 +3,13 @@
 **Language:** Java
 
 ## Overview
-\n * DateTimeUtils: LocalDateTime and formatting.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n
+* DateTimeUtils: LocalDateTime and formatting.
 
 ## Usage
 ```java
-# TODO: add example
+// Compile and run
+// javac java/DateTimeUtils.java
+// java DateTimeUtils
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/java/DateTimeUtilsTest.java
 
-_Generated: 2025-11-13T17:21:27.104617Z_
+_Generated: 2025-12-08T17:27:58.306344Z_

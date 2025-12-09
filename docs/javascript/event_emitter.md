@@ -3,11 +3,13 @@
 **Language:** Javascript
 
 ## Overview
-\n * event_emitter: Node EventEmitter sample.\n * TODO: Implement. Include minimal usage example at bottom.\n
+* event_emitter: Node EventEmitter sample.
+ * Include minimal usage example at bottom.
 
 ## Usage
 ```javascript
-# TODO: add example
+import * as mod from './javascript/event_emitter.js';
+// Call the exported helpers, e.g. mod.example();
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/javascript/event_emitter.test.js
 
-_Generated: 2025-11-13T17:21:27.106469Z_
+_Generated: 2025-12-08T17:27:58.315779Z_

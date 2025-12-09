@@ -3,11 +3,13 @@
 **Language:** Java
 
 ## Overview
-\n * Concurrency: Executors and synchronization basics.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n
+* Concurrency: Executors and synchronization basics.
 
 ## Usage
 ```java
-# TODO: add example
+// Compile and run
+// javac java/Concurrency.java
+// java Concurrency
 ```
 
 ## Integration Notes
@@ -22,4 +24,4 @@
 ## Tests
 See: tests/java/ConcurrencyTest.java
 
-_Generated: 2025-11-13T17:21:27.104246Z_
+_Generated: 2025-12-08T17:27:58.305721Z_

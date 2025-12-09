@@ -3,11 +3,15 @@
 **Language:** Java
 
 ## Overview
-\n * Logging: Logging with SLF4J/Logback.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n
+* Logging: Logging with SLF4J/Logback.
+ *
+ * Uses the JDK logger for a dependency-free example.
 
 ## Usage
 ```java
-# TODO: add example
+// Compile and run
+// javac java/Logging.java
+// java Logging
 ```
 
 ## Integration Notes
@@ -22,4 +26,4 @@
 ## Tests
 See: tests/java/LoggingTest.java
 
-_Generated: 2025-11-13T17:21:27.103690Z_
+_Generated: 2025-12-08T17:27:58.303223Z_

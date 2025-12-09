@@ -3,11 +3,16 @@
 **Language:** Java
 
 ## Overview
-\n * JdbcMySQL: JDBC connect/query to MySQL.\n * TODO: Implement. Keep I/O minimal; add unit tests if applicable.\n
+* JdbcMySQL: JDBC connect/query to MySQL.
+ *
+ * Helper methods keep connection handling minimal while still demonstrating
+ * proper resource management with try-with-resources.
 
 ## Usage
 ```java
-# TODO: add example
+// Compile and run
+// javac java/JdbcMySQL.java
+// java JdbcMySQL
 ```
 
 ## Integration Notes
@@ -22,4 +27,4 @@
 ## Tests
 See: tests/java/JdbcMySQLTest.java
 
-_Generated: 2025-11-13T17:21:27.103190Z_
+_Generated: 2025-12-08T17:27:58.299275Z_

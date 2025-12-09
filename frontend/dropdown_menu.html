@@ -1,1 +1,38 @@
-<!-- dropdown_menu: Dropdown menu patterns. -->\n<!doctype html>\n<html><head><meta charset=\"utf-8\"><title>TODO</title></head><body>\n<!-- TODO: implement component/layout -->\n</body></html>\n
+<!-- dropdown_menu: Dropdown menu patterns. -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dropdown Menu</title>
+  <style>
+    :root { font-family: Inter, system-ui; }
+    body { display:flex; align-items:center; justify-content:center; height:100vh; margin:0; background:#f1f5f9; }
+    .dropdown { position:relative; }
+    button { padding:10px 14px; border:1px solid #cbd5e1; border-radius:10px; background:#fff; cursor:pointer; font-weight:600; }
+    ul { position:absolute; top:110%; right:0; list-style:none; margin:8px 0 0; padding:8px; background:#fff; border:1px solid #e2e8f0; border-radius:10px; box-shadow:0 15px 35px rgba(0,0,0,0.08); min-width:180px; display:none; }
+    ul.show { display:block; }
+    li { padding:8px 10px; border-radius:8px; cursor:pointer; }
+    li:hover { background:#f1f5f9; }
+  </style>
+</head>
+<body>
+  <div class="dropdown">
+    <button id="trigger">Actions ▾</button>
+    <ul id="menu" role="menu">
+      <li role="menuitem">Profile</li>
+      <li role="menuitem">Settings</li>
+      <li role="menuitem">Log out</li>
+    </ul>
+  </div>
+  <script>
+    const trigger = document.getElementById('trigger');
+    const menu = document.getElementById('menu');
+    trigger.addEventListener('click', () => menu.classList.toggle('show'));
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && e.target !== trigger) {
+        menu.classList.remove('show');
+      }
+    });
+  </script>
+</body>
+</html>

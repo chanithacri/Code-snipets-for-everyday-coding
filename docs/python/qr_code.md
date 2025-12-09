@@ -14,7 +14,8 @@ True
 
 ## Usage
 ```python
-# TODO: add example
+from qr_code import *  # import helpers
+result = example()  # replace with a function from python/qr_code.py
 ```
 
 ## Integration Notes
@@ -29,4 +30,4 @@ True
 ## Tests
 See: tests/python/test_qr_code.py
 
-_Generated: 2025-11-13T17:21:27.099025Z_
+_Generated: 2025-12-08T17:27:58.293640Z_

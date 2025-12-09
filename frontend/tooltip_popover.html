@@ -1,1 +1,40 @@
-<!-- tooltip_popover: Tooltip/popover components. -->\n<!doctype html>\n<html><head><meta charset=\"utf-8\"><title>TODO</title></head><body>\n<!-- TODO: implement component/layout -->\n</body></html>\n
+<!-- tooltip_popover: Tooltip/popover components. -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tooltip & Popover</title>
+  <style>
+    :root { font-family: Inter, system-ui; }
+    body { display:flex; align-items:center; justify-content:center; height:100vh; background:#f8fafc; margin:0; }
+    .tooltip { position:relative; }
+    .tooltip .bubble { position:absolute; bottom:125%; left:50%; transform:translateX(-50%); background:#111827; color:#e5e7eb; padding:8px 10px; border-radius:8px; white-space:nowrap; opacity:0; pointer-events:none; transition:opacity 120ms ease, translate 120ms ease; }
+    .tooltip:hover .bubble { opacity:1; }
+    .popover { position:relative; margin-left:30px; }
+    .panel { position:absolute; top:120%; left:0; width:220px; background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:12px; box-shadow:0 18px 45px rgba(0,0,0,0.08); display:none; }
+    .panel.show { display:block; }
+    button { padding:10px 14px; border:none; border-radius:10px; background:#6366f1; color:#fff; font-weight:600; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <div class="tooltip">
+    <button aria-describedby="tip">Hover me</button>
+    <span class="bubble" id="tip">Quick hint about this action.</span>
+  </div>
+  <div class="popover">
+    <button id="show">Show popover</button>
+    <div class="panel" id="panel">Use popovers for small supplemental content or confirmations.</div>
+  </div>
+  <script>
+    const panel = document.getElementById('panel');
+    document.getElementById('show').addEventListener('click', () => {
+      panel.classList.toggle('show');
+    });
+    document.addEventListener('click', (e) => {
+      if (!panel.contains(e.target) && e.target.id !== 'show') {
+        panel.classList.remove('show');
+      }
+    });
+  </script>
+</body>
+</html>

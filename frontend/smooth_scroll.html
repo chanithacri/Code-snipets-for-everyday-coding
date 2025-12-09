@@ -1,1 +1,28 @@
-<!-- smooth_scroll: Smooth scrolling anchors. -->\n<!doctype html>\n<html><head><meta charset=\"utf-8\"><title>TODO</title></head><body>\n<!-- TODO: implement component/layout -->\n</body></html>\n
+<!-- smooth_scroll: Smooth scrolling anchors. -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Smooth Scroll</title>
+  <style>
+    :root { scroll-behavior: smooth; font-family: Inter, system-ui; }
+    body { margin:0; background:#f9fafb; color:#0f172a; }
+    header { position:sticky; top:0; background:#fff; padding:12px 16px; box-shadow:0 2px 12px rgba(0,0,0,0.05); }
+    main { padding:24px; }
+    section { margin:60px 0; padding:24px; background:#fff; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.05); }
+    a { margin-right:12px; color:#2563eb; text-decoration:none; font-weight:600; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#one">Section 1</a>
+    <a href="#two">Section 2</a>
+    <a href="#three">Section 3</a>
+  </header>
+  <main>
+    <section id="one"><h2>Section One</h2><p>Click navigation links to smoothly scroll to targets.</p></section>
+    <section id="two"><h2>Section Two</h2><p>Enable native smooth scroll with <code>scroll-behavior</code>.</p></section>
+    <section id="three"><h2>Section Three</h2><p>No JavaScript required for modern browsers.</p></section>
+  </main>
+</body>
+</html>

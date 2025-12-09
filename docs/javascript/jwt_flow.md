@@ -20,7 +20,8 @@
 
 ## Usage
 ```javascript
-# TODO: add example
+import * as mod from './javascript/jwt_flow.js';
+// Call the exported helpers, e.g. mod.example();
 ```
 
 ## Integration Notes
@@ -35,4 +36,4 @@
 ## Tests
 See: tests/javascript/jwt_flow.test.js
 
-_Generated: 2025-11-13T17:21:27.107588Z_
+_Generated: 2025-12-08T17:27:58.318277Z_

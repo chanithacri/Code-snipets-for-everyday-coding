@@ -1,1 +1,45 @@
-<!-- progress_bar: Animated progress bar. -->\n<!doctype html>\n<html><head><meta charset=\"utf-8\"><title>TODO</title></head><body>\n<!-- TODO: implement component/layout -->\n</body></html>\n
+<!-- progress_bar: Animated progress bar. -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Animated Progress Bar</title>
+  <style>
+    :root { font-family: "Inter", system-ui, -apple-system, sans-serif; }
+    body { display:flex; align-items:center; justify-content:center; height:100vh; background:#0f172a; color:#f8fafc; margin:0; }
+    .card { background:#111827; padding:32px; border-radius:16px; width: min(420px, 90vw); box-shadow:0 20px 60px rgba(0,0,0,0.45); }
+    .label { display:flex; justify-content:space-between; margin-bottom:8px; color:#cbd5e1; font-size:14px; }
+    .track { background:#1f2937; border-radius:999px; overflow:hidden; height:14px; }
+    .bar { height:100%; background: linear-gradient(90deg,#22d3ee,#6366f1); width:0%; transition: width 0.2s ease; }
+    button { margin-top:16px; background:#22d3ee; color:#0f172a; border:none; border-radius:999px; padding:10px 16px; font-weight:600; cursor:pointer; width:100%; }
+    button:disabled { opacity:0.5; cursor:not-allowed; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="label"><span>Deployment</span><span id="percent">0%</span></div>
+    <div class="track"><div class="bar" id="bar"></div></div>
+    <button id="start">Start Progress</button>
+  </div>
+  <script>
+    const bar = document.getElementById('bar');
+    const percent = document.getElementById('percent');
+    const start = document.getElementById('start');
+    let timer;
+    start.addEventListener('click', () => {
+      clearInterval(timer);
+      let value = 0;
+      start.disabled = true;
+      timer = setInterval(() => {
+        value = Math.min(100, value + Math.round(Math.random() * 15));
+        bar.style.width = `${value}%`;
+        percent.textContent = `${value}%`;
+        if (value >= 100) {
+          clearInterval(timer);
+          start.disabled = false;
+        }
+      }, 320);
+    });
+  </script>
+</body>
+</html>
