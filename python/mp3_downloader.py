@@ -21,8 +21,7 @@ def ensure_default_dir():
 
 
 def find_ffmpeg():
-    """
-Try to locate ffmpeg in the current PATH.
+    """Try to locate ffmpeg in the current PATH.
 When you run this inside the virtual environment,
 it should find Vertual_Enviroment/bin/ffmpeg.
     """
@@ -49,6 +48,10 @@ def start_download_thread():
 def download_mp3_worker():
     """Actual download logic (runs in a background thread)."""
     url = url_var.get().strip()
+    # Handle case where placeholder text is still present
+    if url == "Paste a video URL here…":
+        url = ""
+
     if not url:
         root.after(0, lambda: messagebox.showerror("Error", "Please paste a video URL first."))
         return
@@ -101,14 +104,14 @@ def download_mp3_worker():
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             text=True,
-            bufsize=1
+            bufsize=1,
         )
 
         # Read yt-dlp output line by line and update progress
         for line in proc.stdout:
             line = line.strip()
-            # Look for "NN.N%"
-            m = re.search(r'(\d+(?:\.\d+)?)%', line)
+            # Look for "NN.N%" in yt-dlp output
+            m = re.search(r"(\d+(?:\.\d+)?)%", line)
             if m:
                 pct = float(m.group(1))
                 root.after(0, set_progress, pct)
@@ -116,9 +119,10 @@ def download_mp3_worker():
 
         proc.wait()
         if proc.returncode != 0:
-            # If something went wrong, show the last bit of output as error
-            raise RuntimeError("yt-dlp exited with code "
-                               f"{proc.returncode}. Check URL or network.")
+            raise RuntimeError(
+                f"yt-dlp exited with code {proc.returncode}. "
+                "Check the URL, network connection, or yt-dlp version."
+            )
 
     except Exception as e:
         def _on_error():
@@ -143,7 +147,7 @@ def download_mp3_worker():
 
 root = tk.Tk()
 root.title("MP3 Downloader")
-root.geometry("540x260")
+root.geometry("560x270")
 
 url_var = tk.StringVar()
 download_dir = tk.StringVar()
@@ -156,17 +160,55 @@ download_dir.set(DEFAULT_DIR)
 frame = tk.Frame(root, padx=12, pady=12)
 frame.pack(fill="both", expand=True)
 
-# URL label + entry
-tk.Label(frame, text="Video URL:").grid(row=0, column=0, sticky="w")
-tk.Entry(frame, textvariable=url_var, width=52).grid(
-    row=0, column=1, columnspan=2, sticky="we", pady=5
+# -----------------------------
+# Friendly URL Entry Setup
+# -----------------------------
+
+
+def clear_placeholder(event):
+    if url_var.get() == "Paste a video URL here…":
+        url_entry.config(fg="#000000")
+        url_var.set("")
+
+
+def add_placeholder(event):
+    if not url_var.get().strip():
+        url_entry.config(fg="#777777")
+        url_var.set("Paste a video URL here…")
+
+
+# URL label + friendly entry
+tk.Label(frame, text="Video URL:", font=("SF Pro", 12, "bold")).grid(row=0, column=0, sticky="w")
+
+url_entry = tk.Entry(
+    frame,
+    textvariable=url_var,
+    width=52,
+    font=("SF Pro", 13),
+    fg="#777777",
+    bd=2,
+    relief="groove",
+    highlightthickness=1,
+    highlightcolor="#4A90E2",
+    highlightbackground="#CCCCCC",
 )
+url_entry.grid(row=0, column=1, columnspan=2, sticky="we", pady=6)
+
+# Add placeholder behavior
+url_var.set("Paste a video URL here…")
+url_entry.bind("<FocusIn>", clear_placeholder)
+url_entry.bind("<FocusOut>", add_placeholder)
+
+# Autofocus on app start
+url_entry.focus_set()
 
 # Folder label + entry + browse button
-tk.Label(frame, text="Download to:").grid(row=1, column=0, sticky="w")
+tk.Label(frame, text="Download to:", font=("SF Pro", 11)).grid(row=1, column=0, sticky="w")
+
 tk.Entry(frame, textvariable=download_dir, width=40).grid(
     row=1, column=1, sticky="we", pady=5
 )
+
 tk.Button(frame, text="Browse…", command=pick_folder).grid(
     row=1, column=2, padx=5
 )
@@ -181,8 +223,8 @@ progress_bar = ttk.Progressbar(
     frame,
     variable=progress_var,
     maximum=100,
-    length=320,
-    mode="determinate"
+    length=340,
+    mode="determinate",
 )
 progress_bar.grid(row=3, column=0, columnspan=3, pady=8, sticky="we")
 
