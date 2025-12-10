@@ -2,8 +2,11 @@ import os
 import sys
 import shutil
 import subprocess
+import threading
+import re
 import tkinter as tk
 from tkinter import filedialog, messagebox
+from tkinter import ttk
 
 # -----------------------------
 #  Config / helpers
@@ -37,66 +40,101 @@ def pick_folder():
         download_dir.set(folder)
 
 
-def download_mp3():
+def start_download_thread():
+    """Start the download in a background thread so the UI stays responsive."""
+    t = threading.Thread(target=download_mp3_worker, daemon=True)
+    t.start()
+
+
+def download_mp3_worker():
+    """Actual download logic (runs in a background thread)."""
     url = url_var.get().strip()
     if not url:
-        messagebox.showerror("Error", "Please paste a video URL first.")
+        root.after(0, lambda: messagebox.showerror("Error", "Please paste a video URL first."))
         return
 
     folder = download_dir.get().strip()
     if not folder:
-        messagebox.showerror("Error", "Please choose a download folder.")
+        root.after(0, lambda: messagebox.showerror("Error", "Please choose a download folder."))
         return
 
-    # Ensure folder exists
     os.makedirs(folder, exist_ok=True)
 
     ffmpeg_path = find_ffmpeg()
     if not ffmpeg_path:
-        messagebox.showerror(
-            "ffmpeg not found",
-            "Could not find ffmpeg.\n\n"
-            "Make sure ffmpeg is in your virtual environment's 'bin' folder\n"
-            "and that you activated the virtual environment before running this app."
-        )
+        def _no_ffmpeg():
+            messagebox.showerror(
+                "ffmpeg not found",
+                "Could not find ffmpeg.\n\n"
+                "Make sure ffmpeg is in your virtual environment's 'bin' folder\n"
+                "and that you activated the virtual environment before running this app."
+            )
+        root.after(0, _no_ffmpeg)
         return
 
-    status_var.set("Downloading...")
-    root.update_idletasks()
+    def set_status(text):
+        status_var.set(text)
+
+    def set_progress(pct):
+        progress_var.set(pct)
+
+    root.after(0, set_status, "Starting download…")
+    root.after(0, set_progress, 0.0)
 
     # Output template for yt-dlp
     output_template = os.path.join(folder, "%(title)s.%(ext)s")
 
     # Build yt-dlp command
     cmd = [
-        sys.executable,      # the Python inside the venv
+        sys.executable,
         "-m", "yt_dlp",
         "--ffmpeg-location", ffmpeg_path,
-        "-x",                # extract audio
+        "-x",
         "--audio-format", "mp3",
         "-o", output_template,
         url,
     ]
 
     try:
-        result = subprocess.run(
+        proc = subprocess.Popen(
             cmd,
-            capture_output=True,
-            text=True
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            bufsize=1
         )
 
-        if result.returncode != 0:
-            # Include stderr so you can debug if something goes wrong
-            error_msg = result.stderr.strip() or "Unknown error from yt-dlp."
-            raise RuntimeError(error_msg)
+        # Read yt-dlp output line by line and update progress
+        for line in proc.stdout:
+            line = line.strip()
+            # Look for "NN.N%"
+            m = re.search(r'(\d+(?:\.\d+)?)%', line)
+            if m:
+                pct = float(m.group(1))
+                root.after(0, set_progress, pct)
+                root.after(0, set_status, f"Downloading… {pct:.1f}%")
+
+        proc.wait()
+        if proc.returncode != 0:
+            # If something went wrong, show the last bit of output as error
+            raise RuntimeError("yt-dlp exited with code "
+                               f"{proc.returncode}. Check URL or network.")
 
     except Exception as e:
-        status_var.set("Failed")
-        messagebox.showerror("Download failed", str(e))
+        def _on_error():
+            progress_var.set(0.0)
+            status_var.set("Failed")
+            messagebox.showerror("Download failed", str(e))
+        root.after(0, _on_error)
         return
 
-    status_var.set("Done!")
-    messagebox.showinfo("Success", "MP3 downloaded successfully!")
+    # Success
+    def _on_success():
+        progress_var.set(100.0)
+        status_var.set("Done!")
+        messagebox.showinfo("Success", "MP3 downloaded successfully!")
+
+    root.after(0, _on_success)
 
 
 # -----------------------------
@@ -105,11 +143,12 @@ def download_mp3():
 
 root = tk.Tk()
 root.title("MP3 Downloader")
-root.geometry("520x230")
+root.geometry("540x260")
 
 url_var = tk.StringVar()
 download_dir = tk.StringVar()
 status_var = tk.StringVar(value="Ready")
+progress_var = tk.DoubleVar(value=0.0)
 
 ensure_default_dir()
 download_dir.set(DEFAULT_DIR)
@@ -133,13 +172,23 @@ tk.Button(frame, text="Browse…", command=pick_folder).grid(
 )
 
 # Download button
-tk.Button(frame, text="Download MP3", command=download_mp3).grid(
-    row=2, column=1, pady=12
+tk.Button(frame, text="Download MP3", command=start_download_thread).grid(
+    row=2, column=1, pady=8
 )
+
+# Progress bar
+progress_bar = ttk.Progressbar(
+    frame,
+    variable=progress_var,
+    maximum=100,
+    length=320,
+    mode="determinate"
+)
+progress_bar.grid(row=3, column=0, columnspan=3, pady=8, sticky="we")
 
 # Status label
 tk.Label(frame, textvariable=status_var, anchor="w").grid(
-    row=3, column=0, columnspan=3, sticky="w"
+    row=4, column=0, columnspan=3, sticky="w"
 )
 
 frame.columnconfigure(1, weight=1)
