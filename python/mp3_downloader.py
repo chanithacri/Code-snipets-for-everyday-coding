@@ -8,12 +8,31 @@ import tkinter as tk
 from tkinter import filedialog, messagebox
 from tkinter import ttk
 
+"""
+MP3 Downloader with:
+- Progress bar
+- Friendly URL entry with placeholder
+- "Music optimizing" algorithm via quality profiles
+(Compact / Balanced / Studio) that adjust MP3 bitrate.
+
+Assumes:
+- yt-dlp is installed in the same virtualenv
+- ffmpeg & ffprobe are available in PATH (e.g. venv/bin)
+"""
+
 # -----------------------------
 #  Config / helpers
 # -----------------------------
 
 # Default download folder: ~/Music/MP3 Downloads
 DEFAULT_DIR = os.path.join(os.path.expanduser("~"), "Music", "MP3 Downloads")
+
+# Simple music optimization profiles -> target bitrate kbps
+QUALITY_PROFILES = {
+    "Compact (smaller files)": 128,
+    "Balanced (good quality)": 192,
+    "Studio (max quality)": 320,
+}
 
 
 def ensure_default_dir():
@@ -23,10 +42,9 @@ def ensure_default_dir():
 def find_ffmpeg():
     """Try to locate ffmpeg in the current PATH.
 When you run this inside the virtual environment,
-it should find Vertual_Enviroment/bin/ffmpeg.
+it should find venv/bin/ffmpeg.
     """
-    path = shutil.which("ffmpeg")
-    return path
+    return shutil.which("ffmpeg")
 
 
 # -----------------------------
@@ -75,25 +93,33 @@ def download_mp3_worker():
         root.after(0, _no_ffmpeg)
         return
 
-    def set_status(text):
+    # Get selected optimization profile
+    profile_label = quality_var.get()
+    bitrate_kbps = QUALITY_PROFILES.get(profile_label, 192)
+
+    def set_status(text: str):
         status_var.set(text)
 
-    def set_progress(pct):
+    def set_progress(pct: float):
         progress_var.set(pct)
 
-    root.after(0, set_status, "Starting download…")
+    root.after(0, set_status, f"Starting download ({profile_label})…")
     root.after(0, set_progress, 0.0)
 
     # Output template for yt-dlp
     output_template = os.path.join(folder, "%(title)s.%(ext)s")
 
     # Build yt-dlp command
+    # We use --postprocessor-args to instruct ffmpeg to use target bitrate
+    pp_args = f"ffmpeg:-b:a {bitrate_kbps}k"
+
     cmd = [
         sys.executable,
         "-m", "yt_dlp",
         "--ffmpeg-location", ffmpeg_path,
         "-x",
         "--audio-format", "mp3",
+        "--postprocessor-args", pp_args,
         "-o", output_template,
         url,
     ]
@@ -115,7 +141,7 @@ def download_mp3_worker():
             if m:
                 pct = float(m.group(1))
                 root.after(0, set_progress, pct)
-                root.after(0, set_status, f"Downloading… {pct:.1f}%")
+                root.after(0, set_status, f"Downloading… {pct:.1f}% ({profile_label})")
 
         proc.wait()
         if proc.returncode != 0:
@@ -136,7 +162,7 @@ def download_mp3_worker():
     def _on_success():
         progress_var.set(100.0)
         status_var.set("Done!")
-        messagebox.showinfo("Success", "MP3 downloaded successfully!")
+        messagebox.showinfo("Success", f"MP3 downloaded successfully!\nProfile: {profile_label}\nBitrate: {bitrate_kbps} kbps")
 
     root.after(0, _on_success)
 
@@ -146,13 +172,14 @@ def download_mp3_worker():
 # -----------------------------
 
 root = tk.Tk()
-root.title("MP3 Downloader")
-root.geometry("560x270")
+root.title("MP3 Downloader + Optimizer")
+root.geometry("600x310")
 
 url_var = tk.StringVar()
 download_dir = tk.StringVar()
 status_var = tk.StringVar(value="Ready")
 progress_var = tk.DoubleVar(value=0.0)
+quality_var = tk.StringVar(value="Balanced (good quality)")
 
 ensure_default_dir()
 download_dir.set(DEFAULT_DIR)
@@ -183,7 +210,7 @@ tk.Label(frame, text="Video URL:", font=("SF Pro", 12, "bold")).grid(row=0, colu
 url_entry = tk.Entry(
     frame,
     textvariable=url_var,
-    width=52,
+    width=55,
     font=("SF Pro", 13),
     fg="#777777",
     bd=2,
@@ -213,9 +240,22 @@ tk.Button(frame, text="Browse…", command=pick_folder).grid(
     row=1, column=2, padx=5
 )
 
+# Quality / optimization profile
+quality_label = tk.Label(frame, text="Optimize for:", font=("SF Pro", 11))
+quality_label.grid(row=2, column=0, sticky="w", pady=(6, 0))
+
+quality_combo = ttk.Combobox(
+    frame,
+    textvariable=quality_var,
+    values=list(QUALITY_PROFILES.keys()),
+    state="readonly",
+)
+quality_combo.grid(row=2, column=1, sticky="we", pady=(6, 0))
+quality_combo.current(1)  # Balanced by default
+
 # Download button
 tk.Button(frame, text="Download MP3", command=start_download_thread).grid(
-    row=2, column=1, pady=8
+    row=2, column=2, padx=5, pady=(6, 0)
 )
 
 # Progress bar
@@ -223,10 +263,10 @@ progress_bar = ttk.Progressbar(
     frame,
     variable=progress_var,
     maximum=100,
-    length=340,
+    length=380,
     mode="determinate",
 )
-progress_bar.grid(row=3, column=0, columnspan=3, pady=8, sticky="we")
+progress_bar.grid(row=3, column=0, columnspan=3, pady=10, sticky="we")
 
 # Status label
 tk.Label(frame, textvariable=status_var, anchor="w").grid(
