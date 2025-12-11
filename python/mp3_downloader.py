@@ -9,12 +9,14 @@ from tkinter import filedialog, messagebox
 from tkinter import ttk
 
 """
-MP3 Downloader with:
+MP3 / AAC Downloader with:
 - Progress bar
 - Friendly URL entry with placeholder
-- "Music optimizing" algorithm via quality profiles
-(Compact / Balanced / Studio) that adjust MP3 bitrate.
-
+- "Music optimizing" profiles:
+- Compact (MP3 128k)
+- Balanced (MP3 192k)
+- Studio (MP3 320k)
+- Apple-like (AAC 256k, .m4a-style)
 Assumes:
 - yt-dlp is installed in the same virtualenv
 - ffmpeg & ffprobe are available in PATH (e.g. venv/bin)
@@ -27,11 +29,28 @@ Assumes:
 # Default download folder: ~/Music/MP3 Downloads
 DEFAULT_DIR = os.path.join(os.path.expanduser("~"), "Music", "MP3 Downloads")
 
-# Simple music optimization profiles -> target bitrate kbps
+# Quality profiles: format, bitrate (kbps), codec
 QUALITY_PROFILES = {
-    "Compact (smaller files)": 128,
-    "Balanced (good quality)": 192,
-    "Studio (max quality)": 320,
+    "Compact (MP3 128k)": {
+        "format": "mp3",
+        "bitrate": 128,
+        "codec": "libmp3lame",
+    },
+    "Balanced (MP3 192k)": {
+        "format": "mp3",
+        "bitrate": 192,
+        "codec": "libmp3lame",
+    },
+    "Studio (MP3 320k)": {
+        "format": "mp3",
+        "bitrate": 320,
+        "codec": "libmp3lame",
+    },
+    "Apple-like (AAC 256k)": {
+        "format": "m4a",    # AAC in M4A container (Apple-y)
+        "bitrate": 256,
+        "codec": "aac",
+    },
 }
 
 
@@ -40,7 +59,8 @@ def ensure_default_dir():
 
 
 def find_ffmpeg():
-    """Try to locate ffmpeg in the current PATH.
+    """
+Try to locate ffmpeg in the current PATH.
 When you run this inside the virtual environment,
 it should find venv/bin/ffmpeg.
     """
@@ -95,7 +115,16 @@ def download_mp3_worker():
 
     # Get selected optimization profile
     profile_label = quality_var.get()
-    bitrate_kbps = QUALITY_PROFILES.get(profile_label, 192)
+    profile = QUALITY_PROFILES.get(profile_label)
+
+    if profile is None:
+        # Fallback if something weird happens
+        profile_label = "Balanced (MP3 192k)"
+        profile = QUALITY_PROFILES[profile_label]
+
+    audio_format = profile["format"]       # "mp3" or "m4a"
+    bitrate_kbps = profile["bitrate"]      # 128 / 192 / 256 / 320
+    codec = profile["codec"]              # "libmp3lame" or "aac"
 
     def set_status(text: str):
         status_var.set(text)
@@ -109,16 +138,17 @@ def download_mp3_worker():
     # Output template for yt-dlp
     output_template = os.path.join(folder, "%(title)s.%(ext)s")
 
-    # Build yt-dlp command
-    # We use --postprocessor-args to instruct ffmpeg to use target bitrate
-    pp_args = f"ffmpeg:-b:a {bitrate_kbps}k"
+    # Postprocessor args to control codec + bitrate
+    # This tells ffmpeg exactly how to encode the audio stream.
+    pp_args = f"ffmpeg:-c:a {codec} -b:a {bitrate_kbps}k"
 
+    # Build yt-dlp command
     cmd = [
         sys.executable,
         "-m", "yt_dlp",
         "--ffmpeg-location", ffmpeg_path,
         "-x",
-        "--audio-format", "mp3",
+        "--audio-format", audio_format,
         "--postprocessor-args", pp_args,
         "-o", output_template,
         url,
@@ -136,7 +166,7 @@ def download_mp3_worker():
         # Read yt-dlp output line by line and update progress
         for line in proc.stdout:
             line = line.strip()
-            # Look for "NN.N%" in yt-dlp output
+            # Look for "NN.N%" pattern in yt-dlp output
             m = re.search(r"(\d+(?:\.\d+)?)%", line)
             if m:
                 pct = float(m.group(1))
@@ -162,7 +192,13 @@ def download_mp3_worker():
     def _on_success():
         progress_var.set(100.0)
         status_var.set("Done!")
-        messagebox.showinfo("Success", f"MP3 downloaded successfully!\nProfile: {profile_label}\nBitrate: {bitrate_kbps} kbps")
+        messagebox.showinfo(
+            "Success",
+            f"Audio downloaded successfully!\n\n"
+            f"Profile: {profile_label}\n"
+            f"Format: {audio_format.upper()}\n"
+            f"Bitrate: {bitrate_kbps} kbps"
+        )
 
     root.after(0, _on_success)
 
@@ -172,14 +208,14 @@ def download_mp3_worker():
 # -----------------------------
 
 root = tk.Tk()
-root.title("MP3 Downloader + Optimizer")
-root.geometry("600x310")
+root.title("MP3 / AAC Downloader + Optimizer")
+root.geometry("620x330")
 
 url_var = tk.StringVar()
 download_dir = tk.StringVar()
 status_var = tk.StringVar(value="Ready")
 progress_var = tk.DoubleVar(value=0.0)
-quality_var = tk.StringVar(value="Balanced (good quality)")
+quality_var = tk.StringVar(value="Balanced (MP3 192k)")
 
 ensure_default_dir()
 download_dir.set(DEFAULT_DIR)
@@ -190,7 +226,6 @@ frame.pack(fill="both", expand=True)
 # -----------------------------
 # Friendly URL Entry Setup
 # -----------------------------
-
 
 def clear_placeholder(event):
     if url_var.get() == "Paste a video URL here…":
@@ -251,10 +286,10 @@ quality_combo = ttk.Combobox(
     state="readonly",
 )
 quality_combo.grid(row=2, column=1, sticky="we", pady=(6, 0))
-quality_combo.current(1)  # Balanced by default
+quality_combo.set("Balanced (MP3 192k)")
 
 # Download button
-tk.Button(frame, text="Download MP3", command=start_download_thread).grid(
+tk.Button(frame, text="Download Audio", command=start_download_thread).grid(
     row=2, column=2, padx=5, pady=(6, 0)
 )
 
